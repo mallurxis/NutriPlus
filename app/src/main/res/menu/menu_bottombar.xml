@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/mCardapio"
+        android:icon="@drawable/cardapio_icon"
+        android:title="Cardápio"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/mEstoque"
+        android:icon="@drawable/estoque_icon"
+        android:title="Estoque"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/mPratos"
+        android:icon="@drawable/pratos_icon"
+        android:title="Pratos"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/mHistorico"
+        android:icon="@drawable/historico_icon"
+        android:title="Histórico"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/mPerfil"
+        android:icon="@drawable/person_icon"
+        android:title="Perfil"
+        app:showAsAction="ifRoom" />
+
+
+
+</menu>

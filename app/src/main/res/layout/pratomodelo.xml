@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/corFundo">
+
+        <ImageView
+            android:id="@+id/imgPrato"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/iconprato" />
+
+        <TextView
+            android:id="@+id/txtNomePrato"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/imgPrato"
+            android:text="Almoço Executivo"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/txtPrecoPrato"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtNomePrato"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/imgPrato"
+            android:text="Preço: R$ 35,00"
+            android:textSize="15dp" />
+
+        <ImageView
+            android:id="@+id/imgDeletePrato"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignBottom="@+id/imgPrato"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/baseline_delete" />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

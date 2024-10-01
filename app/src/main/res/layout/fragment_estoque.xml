@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".EstoqueFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/corFundo">
+
+        <TextView
+            android:id="@+id/txtHeaderEstoque"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="@color/corTextoVerde"
+            android:paddingLeft="20dp"
+            android:paddingTop="15dp"
+            android:text="ESTOQUE"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignEnd="@+id/txtHeaderEstoque"
+            android:paddingTop="5dp"
+            android:paddingRight="5dp"
+            android:src="@drawable/logoapp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/idRecEstoque"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtHeaderEstoque" />
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/floating_action_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="16dp"
+                android:backgroundTint="@color/corTextoVerde"
+                app:srcCompat="@drawable/baseline_add"
+                app:tint="@color/white"
+                />
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

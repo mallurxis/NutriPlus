@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HistoricoFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/corFundo">
+
+        <TextView
+            android:id="@+id/txtHeaderHistorico"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="@color/corTextoVerde"
+            android:paddingLeft="20dp"
+            android:paddingTop="15dp"
+            android:text="HISTÓRICO"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignEnd="@+id/txtHeaderHistorico"
+            android:paddingTop="5dp"
+            android:paddingRight="5dp"
+            android:src="@drawable/logoapp" />
+
+    </RelativeLayout>
+
+</FrameLayout>
