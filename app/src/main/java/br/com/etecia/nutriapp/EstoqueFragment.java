@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
@@ -25,6 +26,7 @@ public class EstoqueFragment extends Fragment {
 
     RecyclerView idRecViewEstoque;
     List<Produto> produtoList;
+    FloatingActionButton fabEstoque;
 
 
 
@@ -33,8 +35,8 @@ public class EstoqueFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_estoque, container, false);
 
-        FloatingActionButton fabEstoque;
-        fabEstoque = view.findViewById(R.id.floating_action_button);
+
+        fabEstoque = view.findViewById(R.id.fabEstoque);
         fabEstoque.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

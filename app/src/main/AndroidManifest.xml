@@ -12,12 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NutriApp"
         tools:targetApi="31">
-        <activity
-            android:name=".RecebeEstoqueActivity"
-            android:exported="false" />
-        <activity
-            android:name=".EstoqueActivity"
-            android:exported="false" />
+
         <activity
             android:name=".CadastroActivity"
             android:exported="false" />
