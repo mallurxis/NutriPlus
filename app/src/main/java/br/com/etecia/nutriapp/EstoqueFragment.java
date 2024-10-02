@@ -38,7 +38,7 @@ public class EstoqueFragment extends Fragment {
         fabEstoque.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getContext(), CadastroActivity.class);
+                Intent intent = new Intent(getContext(), CadastrarProdutoFragment.class);
                 startActivity(intent);
 
             }
