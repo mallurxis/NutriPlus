@@ -16,6 +16,7 @@
         android:layout_above="@+id/bnbMenu" />
 
 
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bnbMenu"
         android:layout_width="match_parent"
