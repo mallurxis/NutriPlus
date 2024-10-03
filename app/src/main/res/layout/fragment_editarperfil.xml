@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CadastrarProdutoFragment">
-
+    tools:context=".EditarPerfilFragment">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -14,41 +12,41 @@
 
 
         <TextView
-            android:id="@+id/txtHeaderCadProd"
+            android:id="@+id/txtHeaderEditPerfil"
             android:layout_width="match_parent"
             android:layout_height="65dp"
             android:background="@color/corTextoVerde"
             android:paddingLeft="20dp"
             android:paddingTop="15dp"
-            android:text="PRODUTOS"
+            android:text="PERFIL"
             android:textColor="@color/white"
             android:textSize="24sp" />
 
         <ImageView
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:layout_alignEnd="@+id/txtHeaderCadProd"
+            android:layout_alignEnd="@+id/txtHeaderEditPerfil"
             android:paddingTop="5dp"
             android:paddingRight="5dp"
             android:src="@drawable/logoapp" />
 
         <TextView
-            android:id="@+id/txtCadProd"
+            android:id="@+id/txtEditPerfil"
             android:layout_width="match_parent"
             android:layout_height="65dp"
-            android:layout_below="@+id/txtHeaderCadProd"
+            android:layout_below="@+id/txtHeaderEditPerfil"
             android:paddingLeft="20dp"
             android:paddingTop="20dp"
-            android:text="Cadastrar Produto"
+            android:text="Editar perfil"
             android:textSize="20sp"
             android:textStyle="bold" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textProduto"
+            android:id="@+id/textNomeUsu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/txtCadProd"
-            android:hint="Produto"
+            android:layout_below="@+id/txtEditPerfil"
+            android:hint="Nome de usuário"
             android:padding="10dp">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -59,11 +57,11 @@
 
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textPeso"
+            android:id="@+id/textEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textProduto"
-            android:hint="Peso/Quantidade"
+            android:layout_below="@+id/textNomeUsu"
+            android:hint="E-mail"
             android:padding="10dp">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -73,11 +71,11 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textMult"
+            android:id="@+id/textSenha"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textPeso"
-            android:hint="Multiplicador"
+            android:layout_below="@+id/textEmail"
+            android:hint="Senha"
             android:padding="10dp">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -87,11 +85,11 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textQuantEstoque"
+            android:id="@+id/textConfirmaSenha"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textMult"
-            android:hint="Quantidade em estoque"
+            android:layout_below="@+id/textSenha"
+            android:hint="Confirma senha"
             android:padding="10dp">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -101,39 +99,11 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textDesc"
+            android:id="@+id/textRM"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textQuantEstoque"
-            android:hint="Descrição"
-            android:padding="10dp">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textDataEnt"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textDesc"
-            android:hint="Data de entrada"
-            android:padding="10dp">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textValidade"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textDataEnt"
-            android:hint="Validade"
+            android:layout_below="@+id/textConfirmaSenha"
+            android:hint="RM"
             android:padding="10dp">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -144,10 +114,10 @@
 
 
         <Button
+            android:id="@+id/btnSalvarPerfil"
             android:layout_width="match_parent"
-            android:layout_below="@id/textValidade"
             android:layout_height="wrap_content"
-            android:id="@+id/btnSalvarProd"
+            android:layout_below="@id/textRM"
             android:layout_gravity="center"
             android:layout_marginLeft="100dp"
             android:layout_marginTop="30dp"
@@ -157,7 +127,6 @@
             android:backgroundTint="@color/corTextoVerde"
             android:text="Salvar"
             android:textSize="20dp" />
-
 
 
     </RelativeLayout>

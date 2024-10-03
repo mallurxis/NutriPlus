@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CadastrarProdutoFragment">
-
+    tools:context=".EditarProdutoFragment">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -14,7 +12,7 @@
 
 
         <TextView
-            android:id="@+id/txtHeaderCadProd"
+            android:id="@+id/txtHeaderEditProd"
             android:layout_width="match_parent"
             android:layout_height="65dp"
             android:background="@color/corTextoVerde"
@@ -27,27 +25,27 @@
         <ImageView
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:layout_alignEnd="@+id/txtHeaderCadProd"
+            android:layout_alignEnd="@+id/txtHeaderEditProd"
             android:paddingTop="5dp"
             android:paddingRight="5dp"
             android:src="@drawable/logoapp" />
 
         <TextView
-            android:id="@+id/txtCadProd"
+            android:id="@+id/txtEditProd"
             android:layout_width="match_parent"
             android:layout_height="65dp"
-            android:layout_below="@+id/txtHeaderCadProd"
+            android:layout_below="@+id/txtHeaderEditProd"
             android:paddingLeft="20dp"
             android:paddingTop="20dp"
-            android:text="Cadastrar Produto"
+            android:text="Editar Produto"
             android:textSize="20sp"
             android:textStyle="bold" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textProduto"
+            android:id="@+id/textProdutoEdit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/txtCadProd"
+            android:layout_below="@+id/txtEditProd"
             android:hint="Produto"
             android:padding="10dp">
 
@@ -59,10 +57,10 @@
 
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textPeso"
+            android:id="@+id/textPesoEdit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textProduto"
+            android:layout_below="@+id/textProdutoEdit"
             android:hint="Peso/Quantidade"
             android:padding="10dp">
 
@@ -73,10 +71,10 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textMult"
+            android:id="@+id/textMultEdit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textPeso"
+            android:layout_below="@+id/textPesoEdit"
             android:hint="Multiplicador"
             android:padding="10dp">
 
@@ -87,10 +85,10 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textQuantEstoque"
+            android:id="@+id/textQuantEstoqueEdit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textMult"
+            android:layout_below="@+id/textMultEdit"
             android:hint="Quantidade em estoque"
             android:padding="10dp">
 
@@ -101,10 +99,10 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textDesc"
+            android:id="@+id/textDescEdit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textQuantEstoque"
+            android:layout_below="@+id/textQuantEstoqueEdit"
             android:hint="Descrição"
             android:padding="10dp">
 
@@ -115,10 +113,10 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textDataEnt"
+            android:id="@+id/textDataEntEdit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textDesc"
+            android:layout_below="@+id/textDescEdit"
             android:hint="Data de entrada"
             android:padding="10dp">
 
@@ -129,10 +127,10 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textValidade"
+            android:id="@+id/textValidadeEdit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textDataEnt"
+            android:layout_below="@+id/textDataEntEdit"
             android:hint="Validade"
             android:padding="10dp">
 
@@ -145,9 +143,9 @@
 
         <Button
             android:layout_width="match_parent"
-            android:layout_below="@id/textValidade"
+            android:layout_below="@id/textValidadeEdit"
             android:layout_height="wrap_content"
-            android:id="@+id/btnSalvarProd"
+            android:id="@+id/btnEditarProd"
             android:layout_gravity="center"
             android:layout_marginLeft="100dp"
             android:layout_marginTop="30dp"
