@@ -35,11 +35,6 @@ public class PratosFragment extends Fragment {
 
         idRecViewPrato.setAdapter(pratosAdapter);
 
-        pratosAdapter = new PratosAdapter(getContext(), pratoList);
-
-        idRecViewPrato.setHasFixedSize(true);
-
-        idRecViewPrato.setAdapter(pratosAdapter);
         return view;
 
     }
