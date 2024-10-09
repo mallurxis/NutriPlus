@@ -1,4 +1,4 @@
-package br.com.etecia.nutriapp;
+package br.com.etecia.nutriapp.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,6 +10,9 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
+
+import br.com.etecia.nutriapp.R;
+import br.com.etecia.nutriapp.classes.Prato;
 
 public class PratosAdapter extends RecyclerView.Adapter<PratosAdapter.ViewHolder> {
 

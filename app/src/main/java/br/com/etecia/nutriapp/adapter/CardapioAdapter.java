@@ -1,4 +1,4 @@
-package br.com.etecia.nutriapp;
+package br.com.etecia.nutriapp.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -11,6 +11,9 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
+
+import br.com.etecia.nutriapp.R;
+import br.com.etecia.nutriapp.classes.Semana;
 
 public class CardapioAdapter extends RecyclerView.Adapter<CardapioAdapter.ViewHolder> {
     private Context context;

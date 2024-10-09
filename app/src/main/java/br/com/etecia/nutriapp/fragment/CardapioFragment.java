@@ -1,4 +1,4 @@
-package br.com.etecia.nutriapp;
+package br.com.etecia.nutriapp.fragment;
 
 import android.os.Bundle;
 
@@ -13,6 +13,10 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
+import br.com.etecia.nutriapp.adapter.CardapioAdapter;
+import br.com.etecia.nutriapp.R;
+import br.com.etecia.nutriapp.classes.Semana;
+
 
 public class CardapioFragment extends Fragment {
 RecyclerView idRecViewCardapio;
@@ -24,7 +28,7 @@ List<Semana> semanaList;
 
         idRecViewCardapio = view.findViewById(R.id.idRecCardapio);
         semanaList = new ArrayList<>();
-        semanaList.add(new Semana("Feijoada", "01/03/2025"));
+        semanaList.add(new Semana("Semana 1", "01/03/2025"));
 
         CardapioAdapter cardapioAdapter = new CardapioAdapter(getContext(), semanaList);
         idRecViewCardapio.setLayoutManager(new GridLayoutManager(getContext(), 1));
@@ -36,6 +40,8 @@ List<Semana> semanaList;
 
         idRecViewCardapio.setHasFixedSize(true);
         idRecViewCardapio.setAdapter(cardapioAdapter);
+
+
         return view;
     }
 }

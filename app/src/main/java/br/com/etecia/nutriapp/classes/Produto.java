@@ -1,4 +1,4 @@
-package br.com.etecia.nutriapp;
+package br.com.etecia.nutriapp.classes;
 
 public class Produto  {
     private String nome ;

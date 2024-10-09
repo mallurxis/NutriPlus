@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CardapioFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.CardapioFragment">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -34,6 +35,24 @@
             android:layout_height="wrap_content"
             android:id="@+id/idRecCardapio"
             android:layout_below="@id/txtHeaderCardapio"/>
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabCardapio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="16dp"
+                android:backgroundTint="@color/corTextoVerde"
+                app:srcCompat="@drawable/baseline_add"
+                app:tint="@color/white" />
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
 
     </RelativeLayout>
 </FrameLayout>

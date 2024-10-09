@@ -1,4 +1,4 @@
-package br.com.etecia.nutriapp;
+package br.com.etecia.nutriapp.fragment;
 
 import android.os.Bundle;
 
@@ -12,6 +12,10 @@ import android.view.ViewGroup;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import br.com.etecia.nutriapp.adapter.HistoricoAdapter;
+import br.com.etecia.nutriapp.classes.HistoricoPrato;
+import br.com.etecia.nutriapp.R;
 
 
 public class HistoricoFragment extends Fragment {

@@ -1,4 +1,4 @@
-package br.com.etecia.nutriapp;
+package br.com.etecia.nutriapp.activity;
 
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -9,12 +9,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
-import java.util.List;
+import br.com.etecia.nutriapp.R;
+import br.com.etecia.nutriapp.fragment.CardapioFragment;
+import br.com.etecia.nutriapp.fragment.EstoqueFragment;
+import br.com.etecia.nutriapp.fragment.HistoricoFragment;
+import br.com.etecia.nutriapp.fragment.PerfilFragment;
+import br.com.etecia.nutriapp.fragment.PratosFragment;
 
 public class MainActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;

@@ -1,10 +1,7 @@
-package br.com.etecia.nutriapp;
+package br.com.etecia.nutriapp.fragment;
 
-import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -13,13 +10,16 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import br.com.etecia.nutriapp.adapter.EstoqueAdapter;
+import br.com.etecia.nutriapp.classes.Produto;
+import br.com.etecia.nutriapp.R;
 
 
 public class EstoqueFragment extends Fragment {
@@ -36,15 +36,7 @@ public class EstoqueFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_estoque, container, false);
 
 
-        fabEstoque = view.findViewById(R.id.fabEstoque);
-        fabEstoque.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getContext(), CadastrarProdutoFragment.class);
-                startActivity(intent);
 
-            }
-        });
 
 
         idRecViewEstoque = view.findViewById(R.id.idRecEstoque);
@@ -60,21 +52,19 @@ public class EstoqueFragment extends Fragment {
 
         idRecViewEstoque.setAdapter(estoqueAdapter);
 
-        estoqueAdapter = new EstoqueAdapter(getContext(), produtoList);
-
-
-        idRecViewEstoque.setLayoutManager(new
-                GridLayoutManager(
-                getContext(), 1));
-
-        //fixador de tamanho da lista - deixar a lista mais rápida
-        idRecViewEstoque.setHasFixedSize(true);
-
-        //ligar o recyclerview ao adaptador
-        idRecViewEstoque.setAdapter(estoqueAdapter);
-
-
-
+        fabEstoque = view.findViewById(R.id.fabEstoque);
+        fabEstoque.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               CadastrarProdutoFragment fragment = new CadastrarProdutoFragment();
+                if (getActivity() != null) {
+                    getActivity().getSupportFragmentManager()
+                            .beginTransaction()
+                            .replace(R.id.idFragmentEstoque, fragment)
+                            .commit();
+                }
+            }
+        });
 
 
         return view;
