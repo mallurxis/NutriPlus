@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import br.com.etecia.nutriapp.R;
 
 
-public class EditarProdutoFragment extends Fragment {
+public  class EditarProdutoFragment extends Fragment {
 
 
     @Override
