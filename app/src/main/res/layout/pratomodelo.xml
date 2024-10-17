@@ -30,17 +30,28 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/txtNomePrato"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:layout_toRightOf="@+id/imgPrato"
             android:text="Preço: R$ 35,00"
             android:textSize="15dp" />
 
         <ImageView
+            android:id="@+id/btnEditarPrato"
+            android:layout_width="35dp"
+            android:layout_height="30dp"
+            android:layout_alignTop="@id/txtNomePrato"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/baseline_edit_note" />
+
+        <ImageView
             android:id="@+id/imgDeletePrato"
             android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_alignBottom="@+id/imgPrato"
+            android:layout_height="25dp"
+           android:layout_below="@+id/btnEditarPrato"
             android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="10dp"
             android:src="@drawable/baseline_delete" />

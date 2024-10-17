@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/idFragmentEditarPrato"
+    android:layout_height="match_parent"
+    tools:context=".fragment.EditarPratoFragment">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/corFundo">
+
+
+        <TextView
+            android:id="@+id/txtHeaderEditPrato"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="@color/corTextoVerde"
+            android:paddingLeft="20dp"
+            android:paddingTop="15dp"
+            android:text="PRATOS"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignEnd="@+id/txtHeaderEditPrato"
+            android:paddingTop="5dp"
+            android:paddingRight="5dp"
+            android:src="@drawable/logoapp" />
+
+        <TextView
+            android:id="@+id/txtEditPrato"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_below="@+id/txtHeaderEditPrato"
+            android:paddingLeft="20dp"
+            android:paddingTop="20dp"
+            android:text="Editar Prato"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textPratoEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtEditPrato"
+            android:hint="Nome do prato"
+            android:padding="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textPesoEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textPratoEdit"
+            android:hint="Produto 1"
+            android:padding="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtQuantPrato"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textPesoEdit"
+            android:hint="Quantidade Usada"
+            android:padding="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtProdDois"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtQuantPrato"
+            android:hint="Produto 2"
+            android:padding="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textDescEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtProdDois"
+            android:hint="Quantidade Usada"
+            android:padding="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtProdTres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textDescEdit"
+            android:hint="Produto 3"
+            android:padding="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textValidadeEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtProdTres"
+            android:hint="Quantidade Usada"
+            android:padding="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_below="@id/textValidadeEdit"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnEditarProd"
+            android:layout_gravity="center"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="100dp"
+            android:width="370dp"
+            android:height="65dp"
+            android:backgroundTint="@color/corTextoVerde"
+            android:text="Salvar"
+            android:textSize="20dp" />
+
+
+
+    </RelativeLayout>
+
+
+
+</FrameLayout>
