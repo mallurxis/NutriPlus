@@ -28,16 +28,10 @@ public class EstoqueFragment extends Fragment {
     List<Produto> produtoList;
     FloatingActionButton fabEstoque;
 
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_estoque, container, false);
-
-
-
-
 
         idRecViewEstoque = view.findViewById(R.id.idRecEstoque);
 
@@ -66,16 +60,7 @@ public class EstoqueFragment extends Fragment {
             }
         });
 
-
         return view;
-
-
-
-
-
     }
-
-
-
 
 }

@@ -10,6 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,6 +23,8 @@ import br.com.etecia.nutriapp.classes.Semana;
 public class CardapioFragment extends Fragment {
 RecyclerView idRecViewCardapio;
 List<Semana> semanaList;
+FloatingActionButton  fabCardapio;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -40,6 +44,20 @@ List<Semana> semanaList;
 
         idRecViewCardapio.setHasFixedSize(true);
         idRecViewCardapio.setAdapter(cardapioAdapter);
+
+        fabCardapio = view.findViewById(R.id.fabCardapio);
+        fabCardapio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CadastrarSemanaFragment fragment = new CadastrarSemanaFragment();
+                if (getActivity() != null) {
+                    getActivity().getSupportFragmentManager()
+                            .beginTransaction()
+                            .replace(R.id.idFragmentCardapio, fragment)
+                            .commit();
+                }
+            }
+        });
 
 
         return view;

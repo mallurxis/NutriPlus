@@ -39,8 +39,8 @@ public class PratosFragment extends Fragment {
         PratosAdapter pratosAdapter = new PratosAdapter(getContext(), pratoList);
         idRecViewPrato.setLayoutManager(new GridLayoutManager(getContext(), 1));
         idRecViewPrato.setHasFixedSize(true);
-
         idRecViewPrato.setAdapter(pratosAdapter);
+
         fabPratos = view.findViewById(R.id.fabPratos);
         fabPratos.setOnClickListener(new View.OnClickListener() {
             @Override

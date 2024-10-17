@@ -4,15 +4,20 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
 import br.com.etecia.nutriapp.R;
 import br.com.etecia.nutriapp.classes.Prato;
+import br.com.etecia.nutriapp.fragment.EditarPratoFragment;
+import br.com.etecia.nutriapp.fragment.EditarProdutoFragment;
 
 public class PratosAdapter extends RecyclerView.Adapter<PratosAdapter.ViewHolder> {
 
@@ -38,6 +43,18 @@ public class PratosAdapter extends RecyclerView.Adapter<PratosAdapter.ViewHolder
 
         holder.txtNomePrato.setText(prato.getNomePrato());
         holder.txtPrecoPrato.setText(String.format("R$ %.2f", prato.getPrecoPrato()));
+
+        holder.btnEditarPrato.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentManager fragmentManager = ((AppCompatActivity) context).getSupportFragmentManager();
+                EditarPratoFragment fragment = new EditarPratoFragment();
+                fragmentManager.beginTransaction()
+                        .replace(R.id.idFragmentPrato, fragment) // Substitua pelo ID do seu container de fragmentos
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
     }
 
     @Override
@@ -48,11 +65,13 @@ public class PratosAdapter extends RecyclerView.Adapter<PratosAdapter.ViewHolder
     public static class ViewHolder extends RecyclerView.ViewHolder {
         TextView txtNomePrato;
         TextView txtPrecoPrato;
+        ImageView btnEditarPrato;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             txtNomePrato = itemView.findViewById(R.id.txtNomePrato);
             txtPrecoPrato = itemView.findViewById(R.id.txtPrecoPrato);
+            btnEditarPrato = itemView.findViewById(R.id.btnEditarPrato);
         }
     }
 }

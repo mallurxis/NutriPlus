@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/idFragmentCalendario"
+    tools:context=".fragment.CalendarioFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/corFundo">
+
+        <TextView
+            android:id="@+id/txtHeaderCalend"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="@color/corTextoVerde"
+            android:paddingLeft="20dp"
+            android:paddingTop="15dp"
+            android:text="CARDÁPIO"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignEnd="@+id/txtHeaderCalend"
+            android:paddingTop="5dp"
+            android:paddingRight="5dp"
+            android:src="@drawable/logoapp" />
+
+        <TextView
+            android:id="@+id/txtSegunda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtHeaderCalend"
+            android:hint="Segunda-feira"
+           android:textColorHint="@color/corTextoPreto"/>
+
+        <TextView
+            android:id="@+id/txtTerca"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtSegunda"
+            android:hint="Terça-feira"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtQuarta"
+            android:layout_below="@+id/txtTerca"
+            android:hint="Quarta-feira"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/txtQuinta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtQuarta"
+            android:hint="Quinta-feira"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtSexta"
+            android:layout_below="@+id/txtQuinta"
+            android:hint="Sexta-feira"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtSabado"
+            android:layout_below="@+id/txtSexta"
+            android:hint="Sabado"
+            android:textColor="@color/black"
+
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/txtDomingo"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtSabado"
+            android:hint="Domingo"
+            android:textColor="@color/black"
+
+            />
+
+
+    </RelativeLayout>
+
+</FrameLayout>

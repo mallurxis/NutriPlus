@@ -5,18 +5,25 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
 import br.com.etecia.nutriapp.R;
 import br.com.etecia.nutriapp.classes.Semana;
+import br.com.etecia.nutriapp.fragment.CalendarioFragment;
+import br.com.etecia.nutriapp.fragment.EditarSemanaFragment;
+import br.com.etecia.nutriapp.fragment.RefeicoesFragment;
 
 public class CardapioAdapter extends RecyclerView.Adapter<CardapioAdapter.ViewHolder> {
     private Context context;
+    private String[] dishes = {"Pão", "Café com Leite", "Ovos Mexidos", "Salada de Frutas", "Suco de Laranja"};
     private List<Semana> semanaList;
 
     public CardapioAdapter(Context context, List<Semana> semanaList) {
@@ -37,6 +44,32 @@ public class CardapioAdapter extends RecyclerView.Adapter<CardapioAdapter.ViewHo
 
         holder.btnSemanaCardapio.setText(semana.getNomeSemana());
         holder.txtDataSemana.setText(String.format("dd/mm/yyyy"));
+
+        holder.btnSemanaCardapio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentManager fragmentManager = ((AppCompatActivity) context).getSupportFragmentManager();
+                CalendarioFragment fragment = new CalendarioFragment();
+                fragmentManager.beginTransaction()
+                        .replace(R.id.idFragmentCardapio, fragment) // Substitua pelo ID do seu container de fragmentos
+                        .addToBackStack(null)
+                        .commit();
+            }
+
+        });
+        holder.btnEditarSemana.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentManager fragmentManager = ((AppCompatActivity) context).getSupportFragmentManager();
+                EditarSemanaFragment fragment = new EditarSemanaFragment();
+                fragmentManager.beginTransaction()
+                        .replace(R.id.idFragmentCardapio, fragment) // Substitua pelo ID do seu container de fragmentos
+                        .addToBackStack(null)
+                        .commit();
+
+            }
+        });
+
     }
 
     @Override
@@ -48,11 +81,14 @@ public class CardapioAdapter extends RecyclerView.Adapter<CardapioAdapter.ViewHo
     public static class ViewHolder extends RecyclerView.ViewHolder {
         Button btnSemanaCardapio;
         TextView txtDataSemana;
+        ImageView btnEditarSemana;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             btnSemanaCardapio = itemView.findViewById(R.id.btnSemanaCardapio);
             txtDataSemana = itemView.findViewById(R.id.txtDataSemana);
+            btnEditarSemana = itemView.findViewById(R.id.btnEditarSemana);
+
         }
     }
 }

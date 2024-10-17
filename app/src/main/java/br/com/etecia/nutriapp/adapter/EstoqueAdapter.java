@@ -19,6 +19,7 @@ import br.com.etecia.nutriapp.classes.Produto;
 import br.com.etecia.nutriapp.R;
 import br.com.etecia.nutriapp.fragment.CadastrarProdutoFragment;
 import br.com.etecia.nutriapp.fragment.EditarProdutoFragment;
+import br.com.etecia.nutriapp.fragment.RefeicoesFragment;
 
 
 public class EstoqueAdapter extends RecyclerView.Adapter<EstoqueAdapter.ViewHolder> {
