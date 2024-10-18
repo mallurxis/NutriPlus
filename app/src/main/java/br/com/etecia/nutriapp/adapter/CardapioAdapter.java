@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -70,6 +71,26 @@ public class CardapioAdapter extends RecyclerView.Adapter<CardapioAdapter.ViewHo
             }
         });
 
+        holder.btnExcluirSemana.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new AlertDialog.Builder(context)
+                        .setTitle("Excluir item")
+                        .setMessage("Tem certeza de que deseja excluir este item?")
+                        .setPositiveButton("Sim", (dialog, which) -> {
+                            // Ação a ser tomada se o usuário confirmar
+                            semanaList.remove(holder.getAdapterPosition());
+                            notifyItemRemoved(holder.getAdapterPosition());
+                        })
+                        .setNegativeButton("Não", (dialog, which) -> {
+                            // Se o usuário cancelar, apenas fechar o diálogo
+                            dialog.dismiss();
+                        })
+                        .create()
+                        .show();
+            }
+        });
+
     }
 
     @Override
@@ -82,12 +103,14 @@ public class CardapioAdapter extends RecyclerView.Adapter<CardapioAdapter.ViewHo
         Button btnSemanaCardapio;
         TextView txtDataSemana;
         ImageView btnEditarSemana;
+        ImageView btnExcluirSemana;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             btnSemanaCardapio = itemView.findViewById(R.id.btnSemanaCardapio);
             txtDataSemana = itemView.findViewById(R.id.txtDataSemana);
             btnEditarSemana = itemView.findViewById(R.id.btnEditarSemana);
+            btnExcluirSemana = itemView.findViewById(R.id.btnExcluirSemana);
 
         }
     }

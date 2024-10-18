@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -66,6 +67,7 @@ public class PratosAdapter extends RecyclerView.Adapter<PratosAdapter.ViewHolder
         TextView txtNomePrato;
         TextView txtPrecoPrato;
         ImageView btnEditarPrato;
+
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
