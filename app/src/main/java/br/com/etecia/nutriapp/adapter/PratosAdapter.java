@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -56,7 +57,29 @@ public class PratosAdapter extends RecyclerView.Adapter<PratosAdapter.ViewHolder
                         .commit();
             }
         });
+
+        holder.btnExcluirPrato.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                new AlertDialog.Builder(context)
+                        .setTitle("Excluir item")
+                        .setMessage("Tem certeza de que deseja excluir este item?")
+                        .setPositiveButton("Sim", (dialog, which) -> {
+                            // Ação a ser tomada se o usuário confirmar
+                            pratoList.remove(holder.getAdapterPosition());
+                            notifyItemRemoved(holder.getAdapterPosition());
+                        })
+                        .setNegativeButton("Não", (dialog, which) -> {
+                            // Se o usuário cancelar, apenas fechar o diálogo
+                            dialog.dismiss();
+                        })
+                        .create()
+                        .show();
+            }
+        });
     }
+
+
 
     @Override
     public int getItemCount() {
@@ -67,6 +90,7 @@ public class PratosAdapter extends RecyclerView.Adapter<PratosAdapter.ViewHolder
         TextView txtNomePrato;
         TextView txtPrecoPrato;
         ImageView btnEditarPrato;
+        ImageView btnExcluirPrato;
 
 
         public ViewHolder(@NonNull View itemView) {
@@ -74,6 +98,7 @@ public class PratosAdapter extends RecyclerView.Adapter<PratosAdapter.ViewHolder
             txtNomePrato = itemView.findViewById(R.id.txtNomePrato);
             txtPrecoPrato = itemView.findViewById(R.id.txtPrecoPrato);
             btnEditarPrato = itemView.findViewById(R.id.btnEditarPrato);
+            btnExcluirPrato = itemView.findViewById(R.id.imgDeletePrato);
         }
     }
 }

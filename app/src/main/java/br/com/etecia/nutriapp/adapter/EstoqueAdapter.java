@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -67,7 +68,25 @@ public class EstoqueAdapter extends RecyclerView.Adapter<EstoqueAdapter.ViewHold
             }
         });
 
-
+        holder.btnExcluirProduto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                new AlertDialog.Builder(context)
+                        .setTitle("Excluir item")
+                        .setMessage("Tem certeza de que deseja excluir este item?")
+                        .setPositiveButton("Sim", (dialog, which) -> {
+                            // Ação a ser tomada se o usuário confirmar
+                            produtoList.remove(holder.getAdapterPosition());
+                            notifyItemRemoved(holder.getAdapterPosition());
+                        })
+                        .setNegativeButton("Não", (dialog, which) -> {
+                            // Se o usuário cancelar, apenas fechar o diálogo
+                            dialog.dismiss();
+                        })
+                        .create()
+                        .show();
+            }
+        });
 
 
     }
@@ -83,6 +102,7 @@ public class EstoqueAdapter extends RecyclerView.Adapter<EstoqueAdapter.ViewHold
         TextView txtQuantModelo;
         TextView txtPrecoModelo;
         ImageView btnEditarProduto;
+        ImageView btnExcluirProduto;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -90,7 +110,7 @@ public class EstoqueAdapter extends RecyclerView.Adapter<EstoqueAdapter.ViewHold
             txtQuantModelo = itemView.findViewById(R.id.txtQuantModelo);
             txtPrecoModelo = itemView.findViewById(R.id.txtPrecoModelo);
             btnEditarProduto = itemView.findViewById(R.id.btnEditarProduto);
-
+            btnExcluirProduto = itemView.findViewById(R.id.btnExcluirProduto);
 
 
         }

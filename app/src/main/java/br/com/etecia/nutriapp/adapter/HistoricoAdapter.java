@@ -4,9 +4,11 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
@@ -37,6 +39,26 @@ public class HistoricoAdapter extends RecyclerView.Adapter<HistoricoAdapter.View
         holder.txtPratoHistorico.setText(historicoPrato.getPratoHistorico());
         holder.txtIngredienteHistorico.setText(historicoPrato.getIngredienteHistorico());
         holder.txtPrecoHistorico.setText(String.format("R$ %.2f", historicoPrato.getPrecoHistorico()));
+
+        holder.btnExcluirHistorico.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                new AlertDialog.Builder(context)
+                        .setTitle("Excluir item")
+                        .setMessage("Tem certeza de que deseja excluir este item?")
+                        .setPositiveButton("Sim", (dialog, which) -> {
+                            // Ação a ser tomada se o usuário confirmar
+                            historicoList.remove(holder.getAdapterPosition());
+                            notifyItemRemoved(holder.getAdapterPosition());
+                        })
+                        .setNegativeButton("Não", (dialog, which) -> {
+                            // Se o usuário cancelar, apenas fechar o diálogo
+                            dialog.dismiss();
+                        })
+                        .create()
+                        .show();
+            }
+        });
     }
 
     @Override
@@ -48,6 +70,7 @@ public class HistoricoAdapter extends RecyclerView.Adapter<HistoricoAdapter.View
         TextView txtPratoHistorico;
         TextView txtIngredienteHistorico;
         TextView txtPrecoHistorico;
+        ImageView btnExcluirHistorico;
 
 
         public ViewHolder(@NonNull View itemView) {
@@ -55,6 +78,7 @@ public class HistoricoAdapter extends RecyclerView.Adapter<HistoricoAdapter.View
             txtPratoHistorico = itemView.findViewById(R.id.txtPratoGasto);
             txtIngredienteHistorico = itemView.findViewById(R.id.txtNomeIngrediente);
             txtPrecoHistorico = itemView.findViewById(R.id.txtPrecoHistorico);
+            btnExcluirHistorico = itemView.findViewById(R.id.imgDeleteHistorico);
 
         }
     }

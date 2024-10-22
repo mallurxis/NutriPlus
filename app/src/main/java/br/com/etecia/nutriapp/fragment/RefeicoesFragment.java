@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -21,6 +22,7 @@ public class RefeicoesFragment extends Fragment {
     String[] items = {"Arroz", "feijão"};
     AutoCompleteTextView autoCompleteTextView;
     ArrayAdapter<String> adapterItems;
+    ImageView btnVoltarRefeicoes;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -28,6 +30,7 @@ public class RefeicoesFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_refeicoes, container, false);
 
         autoCompleteTextView = view.findViewById(R.id.idInputPratoPrincipalA);
+        btnVoltarRefeicoes = view.findViewById(R.id.btnVoltarRefeicoes);
 
         // Inicialize o ArrayAdapter com um contexto válido
         adapterItems = new ArrayAdapter<String>(getContext(), R.layout.list_item,items);
@@ -38,6 +41,15 @@ public class RefeicoesFragment extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String item = parent.getItemAtPosition(position).toString();
                 Toast.makeText(getContext(), "Item" + item, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        btnVoltarRefeicoes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (getActivity() != null) {
+                    getActivity().getSupportFragmentManager().popBackStack(); // Volta para o fragmento anterior
+                }
             }
         });
 

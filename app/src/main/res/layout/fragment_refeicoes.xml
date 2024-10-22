@@ -29,12 +29,24 @@
             android:paddingRight="5dp"
             android:src="@drawable/logoapp" />
 
+        <ImageView
+            android:id="@+id/btnVoltarRefeicoes"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/txtHeaderCardapio"
+            android:layout_alignParentStart="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="15dp"
+            android:src="@drawable/baseline_back" />
+
         <!-- Campo de entrada com a setinha -->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/idInputPratoPrincipal"
             style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingTop="80dp"
             android:layout_below="@id/txtHeaderCardapio"
             android:hint="Prato Principal">
 
