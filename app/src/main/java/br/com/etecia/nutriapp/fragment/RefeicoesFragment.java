@@ -27,7 +27,7 @@ public class RefeicoesFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_refeicoes, container, false);
 
-        autoCompleteTextView = view.findViewById(R.id.idInputRefeicao);
+        autoCompleteTextView = view.findViewById(R.id.idInputPratoPrincipalA);
 
         // Inicialize o ArrayAdapter com um contexto válido
         adapterItems = new ArrayAdapter<String>(getContext(), R.layout.list_item,items);
