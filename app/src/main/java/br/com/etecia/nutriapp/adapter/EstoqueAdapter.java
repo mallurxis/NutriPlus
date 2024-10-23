@@ -26,7 +26,7 @@ import br.com.etecia.nutriapp.fragment.RefeicoesFragment;
 public class EstoqueAdapter extends RecyclerView.Adapter<EstoqueAdapter.ViewHolder> {
 
     private Context context;
-    private List<Produto> produtoList;
+     List<Produto> produtoList;
 
     // Construtor do Adaptador
     public EstoqueAdapter(Context context, List<Produto> produtoList) {

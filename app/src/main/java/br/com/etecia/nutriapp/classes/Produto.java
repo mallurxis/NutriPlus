@@ -18,6 +18,9 @@ public class Produto  {
         this.dataEntrada = dataEntrada;
     }
 
+    public Produto(int id, String nome, double quantidade, double preco, double multiplicador, double quantEstoque, String desc, String dataEntrada, String validade) {
+    }
+
     public String getNome() {
         return nome;
     }

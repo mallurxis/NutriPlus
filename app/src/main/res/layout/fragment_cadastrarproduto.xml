@@ -19,6 +19,8 @@
         android:background="@color/corFundo">
 
 
+
+
         <TextView
             android:id="@+id/txtHeaderCadProd"
             android:layout_width="match_parent"
@@ -49,6 +51,12 @@
             android:paddingTop="20dp"
             android:paddingLeft="15dp"
             android:src="@drawable/baseline_back" />
+
+        <EditText
+            android:id="@+id/editTextProdutoId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
 
         <TextView
             android:id="@+id/txtCadProd"
