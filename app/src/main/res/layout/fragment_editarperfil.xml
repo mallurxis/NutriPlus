@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragment.EditarPerfilFragment">
 
 
@@ -59,6 +60,10 @@
             android:id="@+id/textNomeUsu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:boxStrokeColor="@color/corTextoVerde"
+            app:hintTextColor="@color/corTextoVerde"
+            android:textColorHint="@color/corCinza"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_below="@+id/txtEditPerfil"
             android:hint="Nome de usuário"
             android:padding="10dp">
@@ -75,6 +80,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textNomeUsu"
+            app:boxStrokeColor="@color/corTextoVerde"
+            app:hintTextColor="@color/corTextoVerde"
+            android:textColorHint="@color/corCinza"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:hint="E-mail"
             android:padding="10dp">
 
@@ -88,6 +97,10 @@
             android:id="@+id/textSenha"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:boxStrokeColor="@color/corTextoVerde"
+            app:hintTextColor="@color/corTextoVerde"
+            android:textColorHint="@color/corCinza"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_below="@+id/textEmail"
             android:hint="Senha"
             android:padding="10dp">
@@ -103,6 +116,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textSenha"
+            app:boxStrokeColor="@color/corTextoVerde"
+            app:hintTextColor="@color/corTextoVerde"
+            android:textColorHint="@color/corCinza"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:hint="Confirma senha"
             android:padding="10dp">
 
@@ -117,6 +134,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textConfirmaSenha"
+            app:boxStrokeColor="@color/corTextoVerde"
+            app:hintTextColor="@color/corTextoVerde"
+            android:textColorHint="@color/corCinza"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:hint="RM"
             android:padding="10dp">
 

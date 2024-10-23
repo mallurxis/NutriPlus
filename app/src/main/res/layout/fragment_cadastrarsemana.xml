@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragment.CadastrarSemanaFragment">
 
     <RelativeLayout
@@ -57,6 +58,10 @@
             android:id="@+id/textProduto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:boxStrokeColor="@color/corTextoVerde"
+            app:hintTextColor="@color/corTextoVerde"
+            android:textColorHint="@color/corCinza"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_below="@+id/txtCadProd"
             android:hint="Semana"
             android:padding="10dp">
@@ -73,6 +78,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textProduto"
+            app:boxStrokeColor="@color/corTextoVerde"
+            app:hintTextColor="@color/corTextoVerde"
+            android:textColorHint="@color/corCinza"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:hint="Data Inicio"
             android:padding="10dp">
 
@@ -86,6 +95,10 @@
             android:id="@+id/txtDataFinal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:boxStrokeColor="@color/corTextoVerde"
+            app:hintTextColor="@color/corTextoVerde"
+            android:textColorHint="@color/corCinza"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_below="@+id/textPeso"
             android:hint="Data Final"
             android:padding="10dp">
