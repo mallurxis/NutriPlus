@@ -19,6 +19,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
 import org.json.JSONArray;
@@ -37,7 +38,7 @@ public class ApiMainActivity extends AppCompatActivity {
     private static final int CODE_GET_REQUEST = 1024;
     private static final int CODE_POST_REQUEST = 1025;
 
-    TextInputLayout txtNomeProd, txtQuantProd, txtPrecoProd, txtMultiplicador, txtQuantEstoque, txtDesc, txtDataEntrada, txtValidade;
+    TextInputEditText txtNomeProd, txtQuantProd, txtPrecoProd, txtMultiplicador, txtQuantEstoque, txtDesc, txtDataEntrada, txtValidade;
     EditText editTextProdId;
     Button btnSalvarProd;
     List<Produto> produtoList;
@@ -77,15 +78,15 @@ public class ApiMainActivity extends AppCompatActivity {
     });
         readHeroes();
     }
-    private void createHero() {
-        String nome = txtNomeProd.getEditText().getText().toString().trim();
-        String quantidade = txtQuantProd.getEditText().getText().toString().trim();
-        String preco = txtPrecoProd.getEditText().getText().toString().trim();
-        String multiplicador = txtMultiplicador.getEditText().getText().toString().trim();
-        String quantEstoque = txtQuantEstoque.getEditText().getText().toString().trim();
-        String desc = txtDesc.getEditText().getText().toString().trim();
-        String dataEntrada = txtDataEntrada.getEditText().getText().toString().trim();
-        String validade = txtValidade.getEditText().getText().toString().trim();
+    public void createHero() {
+        String nome = txtNomeProd.getText().toString().trim();
+        String quantidade = txtQuantProd.getText().toString().trim();
+        String preco = txtPrecoProd.getText().toString().trim();
+        String multiplicador = txtMultiplicador.getText().toString().trim();
+        String quantEstoque = txtQuantEstoque.getText().toString().trim();
+        String desc = txtDesc.getText().toString().trim();
+        String dataEntrada = txtDataEntrada.getText().toString().trim();
+        String validade = txtValidade.getText().toString().trim();
 
 
         if (TextUtils.isEmpty(nome)) {
@@ -157,14 +158,14 @@ public class ApiMainActivity extends AppCompatActivity {
 
     private void updateHero() {
         String id = editTextProdId.getText().toString();
-        String nome = txtNomeProd.getEditText().getText().toString().trim();
-        String quantidade = txtQuantProd.getEditText().getText().toString().trim();
-        String preco = txtPrecoProd.getEditText().getText().toString().trim();
-        String multiplicador = txtMultiplicador.getEditText().getText().toString().trim();
-        String quantEstoque = txtQuantEstoque.getEditText().getText().toString().trim();
-        String desc = txtDesc.getEditText().getText().toString().trim();
-        String dataEntrada = txtDataEntrada.getEditText().getText().toString().trim();
-        String validade = txtValidade.getEditText().getText().toString().trim();
+        String nome = txtNomeProd.getText().toString().trim();
+        String quantidade = txtQuantProd.getText().toString().trim();
+        String preco = txtPrecoProd.getText().toString().trim();
+        String multiplicador = txtMultiplicador.getText().toString().trim();
+        String quantEstoque = txtQuantEstoque.getText().toString().trim();
+        String desc = txtDesc.getText().toString().trim();
+        String dataEntrada = txtDataEntrada.getText().toString().trim();
+        String validade = txtValidade.getText().toString().trim();
 
         if (TextUtils.isEmpty(nome)) {
             txtNomeProd.setError("Por favor entre com o nome do produto");
@@ -228,14 +229,14 @@ public class ApiMainActivity extends AppCompatActivity {
 
         btnSalvarProd.setText("Adicionar");
 
-        txtNomeProd.getEditText().setText("");
-        txtQuantProd.getEditText().setText("");
-        txtPrecoProd.getEditText().setText("");
-        txtMultiplicador.getEditText().setText("");
-        txtQuantEstoque.getEditText().setText("");
-        txtDesc.getEditText().setText("");
-        txtDataEntrada.getEditText().setText("");
-        txtValidade.getEditText().setText("");
+        txtNomeProd.setText("");
+        txtQuantProd.setText("");
+        txtPrecoProd.setText("");
+        txtMultiplicador.setText("");
+        txtQuantEstoque.setText("");
+        txtDesc.setText("");
+        txtDataEntrada.setText("");
+        txtValidade.setText("");
 
         isUpdating = false;
     }
@@ -262,7 +263,7 @@ public class ApiMainActivity extends AppCompatActivity {
                     obj.getString("validade")
             ));
         }
-        EstoqueAdapter adapter = new EstoqueAdapter(this, produtoList); // Use o contexto e a lista
+        EstoqueAdapter adapter = new EstoqueAdapter(this, produtoList);
 
     }
     private class PerformNetworkRequest extends AsyncTask<Void, Void, String> {
