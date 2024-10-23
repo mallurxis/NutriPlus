@@ -35,11 +35,6 @@ public class EstoqueFragment extends Fragment {
 
         idRecViewEstoque = view.findViewById(R.id.idRecEstoque);
 
-        produtoList = new ArrayList<>();
-        produtoList.add(new Produto("Arroz",  50, 20.50));
-        produtoList.add(new Produto("Feijão", 30, 40.50));
-        produtoList.add(new Produto("Batata", 25, 30.40));
-
         EstoqueAdapter estoqueAdapter = new EstoqueAdapter(getContext(), produtoList);
         idRecViewEstoque.setLayoutManager(new GridLayoutManager(getContext(), 1));
         idRecViewEstoque.setHasFixedSize(true);

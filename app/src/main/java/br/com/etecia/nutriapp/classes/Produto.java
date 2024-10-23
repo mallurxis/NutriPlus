@@ -1,34 +1,76 @@
 package br.com.etecia.nutriapp.classes;
 
+import java.util.Date;
+
 public class Produto  {
     private String nome ;
-    private String txtQuantidade;
-    private String txtPreco;
-    private int quantidade;
-    private double preco;
+    private int codProd;
+    private double preco, quantidade, multiplicador;
+    private Date validade, dataEntrada;
 
-    public Produto(String nome, int quantidade, double preco){
+    public Produto(String nome, int codProd, double preco, double quantidade, double multiplicador, Date validade, Date dataEntrada) {
         this.nome = nome;
-        this.quantidade = quantidade;
+        this.codProd = codProd;
         this.preco = preco;
+        this.quantidade = quantidade;
+        this.multiplicador = multiplicador;
+        this.validade = validade;
+        this.dataEntrada = dataEntrada;
     }
-    public String getNome(){
+
+    public String getNome() {
         return nome;
     }
-    public int getQuantidade(){
-        return quantidade;
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
-    public double getPreco(){
+
+    public int getCodProd() {
+        return codProd;
+    }
+
+    public void setCodProd(int codProd) {
+        this.codProd = codProd;
+    }
+
+    public double getPreco() {
         return preco;
     }
 
-    public void setNome(String nome){
-        this.nome = nome;
+    public void setPreco(double preco) {
+        this.preco = preco;
     }
-    public void setQuantidade(int quantidade){
+
+    public double getQuantidade() {
+        return quantidade;
+    }
+
+    public void setQuantidade(double quantidade) {
         this.quantidade = quantidade;
     }
-    public void setPreco(double preco){
-        this.preco = preco;
+
+    public double getMultiplicador() {
+        return multiplicador;
+    }
+
+    public void setMultiplicador(double multiplicador) {
+        this.multiplicador = multiplicador;
+    }
+
+    public Date getValidade() {
+        return validade;
+    }
+
+    public void setValidade(Date validade) {
+        this.validade = validade;
+    }
+
+    public Date getDataEntrada() {
+        return dataEntrada;
+    }
+
+    public void setDataEntrada(Date dataEntrada) {
+        this.dataEntrada = dataEntrada;
     }
 }
