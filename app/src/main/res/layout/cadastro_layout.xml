@@ -36,6 +36,8 @@
         android:layout_marginTop="50dp"
         android:layout_marginRight="30dp"
         android:textColorHint="@color/corTextoVerde"
+        app:hintTextColor="@color/corTextoVerde"
+        app:boxStrokeColor="@color/corTextoVerde"
         app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Full">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -58,6 +60,8 @@
         android:layout_marginTop="20dp"
         android:layout_marginRight="30dp"
         android:textColorHint="@color/corTextoVerde"
+        app:hintTextColor="@color/corTextoVerde"
+        app:boxStrokeColor="@color/corTextoVerde"
         app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Full">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -80,6 +84,8 @@
         android:layout_marginTop="20dp"
         android:layout_marginRight="30dp"
         android:textColorHint="@color/corTextoVerde"
+        app:hintTextColor="@color/corTextoVerde"
+        app:boxStrokeColor="@color/corTextoVerde"
         app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Full">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -102,6 +108,8 @@
         android:layout_marginTop="20dp"
         android:layout_marginRight="30dp"
         android:textColorHint="@color/corTextoVerde"
+        app:hintTextColor="@color/corTextoVerde"
+        app:boxStrokeColor="@color/corTextoVerde"
         app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Full">
 
         <com.google.android.material.textfield.TextInputEditText

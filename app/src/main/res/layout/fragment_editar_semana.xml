@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/idFragmentEditarSemana"
     tools:context=".fragment.CadastrarSemanaFragment">
 
@@ -58,6 +59,10 @@
             android:id="@+id/txtNomeSemanaEdit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:boxStrokeColor="@color/corTextoVerde"
+            app:hintTextColor="@color/corTextoVerde"
+            android:textColorHint="@color/corCinza"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_below="@+id/txtCadProd"
             android:hint="Semana"
             android:padding="10dp">
@@ -73,6 +78,10 @@
             android:id="@+id/txtDataInicioEdit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:boxStrokeColor="@color/corTextoVerde"
+            app:hintTextColor="@color/corTextoVerde"
+            android:textColorHint="@color/corCinza"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_below="@+id/txtNomeSemanaEdit"
             android:hint="Data Inicio"
             android:padding="10dp">
@@ -85,6 +94,10 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/txtDataFinalEdit"
+            app:boxStrokeColor="@color/corTextoVerde"
+            app:hintTextColor="@color/corTextoVerde"
+            android:textColorHint="@color/corCinza"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/txtDataInicioEdit"
