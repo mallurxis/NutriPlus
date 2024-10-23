@@ -50,6 +50,7 @@ public class PratosFragment extends Fragment {
                     getActivity().getSupportFragmentManager()
                             .beginTransaction()
                             .replace(R.id.idFragmentPrato, fragment)
+                            .addToBackStack(null) // Adiciona à pilha de fragmentos
                             .commit();
                 }
             }

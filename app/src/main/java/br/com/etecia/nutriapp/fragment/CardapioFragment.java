@@ -54,6 +54,7 @@ FloatingActionButton  fabCardapio;
                     getActivity().getSupportFragmentManager()
                             .beginTransaction()
                             .replace(R.id.idFragmentCardapio, fragment)
+                            .addToBackStack(null) // Adiciona à pilha de fragmentos
                             .commit();
                 }
             }
