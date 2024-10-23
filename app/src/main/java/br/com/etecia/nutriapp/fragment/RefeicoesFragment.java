@@ -48,7 +48,7 @@ public class RefeicoesFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 if (getActivity() != null) {
-                    getActivity().getSupportFragmentManager().popBackStack(); // Volta para o fragmento anterior
+                    getActivity().getSupportFragmentManager().popBackStack(); // Volta para o fragment anterior
                 }
             }
         });

@@ -55,6 +55,7 @@ public class EstoqueFragment extends Fragment {
                     getActivity().getSupportFragmentManager()
                             .beginTransaction()
                             .replace(R.id.idFragmentEstoque, fragment)
+                            .addToBackStack(null) // Adiciona à pilha de fragmentos
                             .commit();
                 }
             }
