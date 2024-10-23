@@ -5,6 +5,8 @@
     android:layout_height="match_parent"
     tools:context=".fragment.EditarPerfilFragment">
 
+
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -141,6 +143,6 @@
             android:textSize="20dp" />
 
 
-    </RelativeLayout>
+     </RelativeLayout>
 
 </FrameLayout>
