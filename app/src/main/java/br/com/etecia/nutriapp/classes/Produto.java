@@ -5,20 +5,18 @@ import java.util.Date;
 public class Produto  {
     private String nome ;
     private int codProd;
-    private double preco, quantidade, multiplicador;
+    private double preco, quantidade, multiplicador, quantEstoque;
     private Date validade, dataEntrada;
 
-    public Produto(String nome, int codProd, double preco, double quantidade, double multiplicador, Date validade, Date dataEntrada) {
+    public Produto(String nome, int codProd, double preco, double quantidade, double multiplicador, double quantEstoque, Date validade, Date dataEntrada) {
         this.nome = nome;
         this.codProd = codProd;
         this.preco = preco;
         this.quantidade = quantidade;
         this.multiplicador = multiplicador;
+        this.quantEstoque = quantEstoque;
         this.validade = validade;
         this.dataEntrada = dataEntrada;
-    }
-
-    public Produto(int id, String nome, double quantidade, double preco, double multiplicador, double quantEstoque, String desc, String dataEntrada, String validade) {
     }
 
     public String getNome() {
