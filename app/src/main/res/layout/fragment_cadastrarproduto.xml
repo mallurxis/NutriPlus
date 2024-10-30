@@ -71,6 +71,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/txtCadProd"
+                app:boxStrokeColor="@color/corTextoVerde"
+                app:hintTextColor="@color/corTextoVerde"
+                android:textColorHint="@color/corCinza"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:hint="Produto"
                 android:padding="10dp">
 
@@ -84,13 +88,15 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textPeso"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textProduto"
                 android:hint="Peso/Quantidade"
                 android:padding="10dp"
-                app:boxStrokeColor="@color/corTextoVerde">
+                app:boxStrokeColor="@color/corTextoVerde"
+                app:hintTextColor="@color/corTextoVerde"
+                android:textColorHint="@color/corCinza"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/txtInputQuant"
@@ -101,13 +107,15 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textPreco"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/textPeso"
                 android:hint="Preço"
                 android:padding="10dp"
-                app:boxStrokeColor="@color/corTextoVerde">
+                app:boxStrokeColor="@color/corTextoVerde"
+                app:hintTextColor="@color/corTextoVerde"
+                android:textColorHint="@color/corCinza"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/txtInputPreco"
@@ -122,6 +130,10 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textPreco"
                 android:hint="Multiplicador"
+                app:boxStrokeColor="@color/corTextoVerde"
+                app:hintTextColor="@color/corTextoVerde"
+                android:textColorHint="@color/corCinza"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:padding="10dp">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -137,6 +149,10 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textMult"
                 android:hint="Quantidade em estoque"
+                app:boxStrokeColor="@color/corTextoVerde"
+                app:hintTextColor="@color/corTextoVerde"
+                android:textColorHint="@color/corCinza"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:padding="10dp">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -151,6 +167,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textQuantEstoque"
+                app:boxStrokeColor="@color/corTextoVerde"
+                app:hintTextColor="@color/corTextoVerde"
+                android:textColorHint="@color/corCinza"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:hint="Descrição"
                 android:padding="10dp">
 
@@ -165,6 +185,10 @@
                 android:id="@+id/textDataEnt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                app:boxStrokeColor="@color/corTextoVerde"
+                app:hintTextColor="@color/corTextoVerde"
+                android:textColorHint="@color/corCinza"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_below="@+id/textDesc"
                 android:hint="Data de entrada"
                 android:padding="10dp">
@@ -181,6 +205,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textDataEnt"
+                app:boxStrokeColor="@color/corTextoVerde"
+                app:hintTextColor="@color/corTextoVerde"
+                android:textColorHint="@color/corCinza"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:hint="Validade"
                 android:padding="10dp">
 
