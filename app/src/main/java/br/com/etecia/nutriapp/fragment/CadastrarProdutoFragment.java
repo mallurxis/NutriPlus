@@ -1,6 +1,7 @@
 package br.com.etecia.nutriapp.fragment;
 
 import android.annotation.SuppressLint;
+import android.os.AsyncTask;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -11,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
 
@@ -26,6 +28,10 @@ import br.com.etecia.nutriapp.classes.Produto;
 
 
 public class CadastrarProdutoFragment extends Fragment {
+
+    private static final int CODE_GET_REQUEST = 1024;
+    private static final int CODE_POST_REQUEST = 1025;
+
     ImageView btnVoltarCadProd;
     Button btnSalvarProd;
     TextInputEditText txtNomeProd, txtQuantProd, txtPrecoProd, txtMultiplicador, txtQuantEstoque, txtDesc, txtDataEntrada, txtValidade;
@@ -68,7 +74,12 @@ public class CadastrarProdutoFragment extends Fragment {
             @Override
             public void onClick(View view) {
 
-                createprodutos();
+                try {
+                    createprodutos();
+                    Toast.makeText(getContext(), "Produto cadastrado com sucesso!", Toast.LENGTH_SHORT).show();
+                } catch (ParseException e) {
+                    throw new RuntimeException(e);
+                }
 
             }
         });
@@ -140,8 +151,25 @@ public class CadastrarProdutoFragment extends Fragment {
         params.put("dataEntrada", dataEntrada);
         params.put("validade", validade);
         params.put("desc", desc);
+        PerformNetworkRequest request = new PerformNetworkRequest(Api.URL_CREATE_PRODUTOS, params, CODE_POST_REQUEST);
+        request.execute();
 
 
 
     };
-}
+    private class PerformNetworkRequest extends AsyncTask<Void, Void, String> {
+        String url;
+        HashMap<String, String> params;
+        int requestCode;
+
+        PerformNetworkRequest(String url, HashMap<String, String> params, int requestCode) {
+            this.url = url;
+            this.params = params;
+            this.requestCode = requestCode;
+        }
+
+        @Override
+        protected String doInBackground(Void... voids) {
+            return "";
+        }
+    }}
