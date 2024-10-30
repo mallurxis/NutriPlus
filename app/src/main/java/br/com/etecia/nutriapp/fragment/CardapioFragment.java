@@ -21,9 +21,9 @@ import br.com.etecia.nutriapp.classes.Semana;
 
 
 public class CardapioFragment extends Fragment {
-RecyclerView idRecViewCardapio;
-List<Semana> semanaList;
-FloatingActionButton  fabCardapio;
+    RecyclerView idRecViewCardapio;
+    List<Semana> semanaList;
+    FloatingActionButton fabCardapio;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -33,6 +33,12 @@ FloatingActionButton  fabCardapio;
         idRecViewCardapio = view.findViewById(R.id.idRecCardapio);
         semanaList = new ArrayList<>();
         semanaList.add(new Semana("Semana 1", "01/03/2025"));
+        semanaList.add(new Semana("Semana 2", "08/03/2025"));
+        semanaList.add(new Semana("Semana 3", "16/03/2025"));
+        semanaList.add(new Semana("Semana 4", "24/03/2025"));
+        semanaList.add(new Semana("Semana 5", "01/04/2025"));
+        semanaList.add(new Semana("Semana 6", "08/04/2025"));
+        semanaList.add(new Semana("Semana 7", "16/04/2025"));
 
         CardapioAdapter cardapioAdapter = new CardapioAdapter(getContext(), semanaList);
         idRecViewCardapio.setLayoutManager(new GridLayoutManager(getContext(), 1));

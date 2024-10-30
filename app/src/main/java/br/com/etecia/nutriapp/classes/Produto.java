@@ -6,17 +6,26 @@ public class Produto  {
     private String nome ;
     private int codProd;
     private double preco, quantidade, multiplicador, quantEstoque;
-    private Date validade, dataEntrada;
+    private int validade, dataEntrada;
 
-    public Produto(String nome, int codProd, double preco, double quantidade, double multiplicador, double quantEstoque, Date validade, Date dataEntrada) {
+   // public Produto(String nome,  double preco, double quantidade, int codProd, double multiplicador, double quantEstoque, int validade, int dataEntrada) {
+     //   this.nome = nome;
+       // this.preco = preco;
+        //this.quantidade = quantidade;
+        //this.codProd = codProd;
+
+        
+       // this.multiplicador = multiplicador;
+        //this.quantEstoque = quantEstoque;
+        //this.validade = validade;
+        //this.dataEntrada = dataEntrada;
+    //}
+
+    public Produto(String nome, double preco, double quantidade) {
         this.nome = nome;
-        this.codProd = codProd;
         this.preco = preco;
         this.quantidade = quantidade;
-        this.multiplicador = multiplicador;
-        this.quantEstoque = quantEstoque;
-        this.validade = validade;
-        this.dataEntrada = dataEntrada;
+
     }
 
     public String getNome() {
@@ -59,19 +68,15 @@ public class Produto  {
         this.multiplicador = multiplicador;
     }
 
-    public Date getValidade() {
+    public int getValidade() {
         return validade;
     }
 
-    public void setValidade(Date validade) {
-        this.validade = validade;
-    }
+    public void setValidade(int validade) {this.validade = validade;}
 
-    public Date getDataEntrada() {
+    public int getDataEntrada() {
         return dataEntrada;
     }
 
-    public void setDataEntrada(Date dataEntrada) {
-        this.dataEntrada = dataEntrada;
-    }
+    public void setDataEntrada(int dataEntrada) {this.dataEntrada = dataEntrada;}
 }

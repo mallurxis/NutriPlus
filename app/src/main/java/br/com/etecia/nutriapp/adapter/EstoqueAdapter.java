@@ -93,7 +93,7 @@ public class EstoqueAdapter extends RecyclerView.Adapter<EstoqueAdapter.ViewHold
 
     @Override
     public int getItemCount() {
-        return 0;
+        return produtoList.size();
     }
 
     // Classe ViewHolder para armazenar as views

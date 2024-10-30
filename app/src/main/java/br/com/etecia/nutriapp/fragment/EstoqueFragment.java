@@ -34,6 +34,13 @@ public class EstoqueFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_estoque, container, false);
 
         idRecViewEstoque = view.findViewById(R.id.idRecEstoque);
+        produtoList = new ArrayList<>();
+        produtoList.add(new Produto("Arroz", 20.00, 20.00));
+        produtoList.add(new Produto("Feijão", 50.00, 20.00));
+        produtoList.add(new Produto("Contra-Filé", 40.00, 1));
+        produtoList.add(new Produto("Batata", 50.00, 30.00));
+        produtoList.add(new Produto("Frango", 40.00, 30.00));
+        produtoList.add(new Produto("Sal", 15.00, 5));
 
         EstoqueAdapter estoqueAdapter = new EstoqueAdapter(getContext(), produtoList);
         idRecViewEstoque.setLayoutManager(new GridLayoutManager(getContext(), 1));
@@ -41,11 +48,24 @@ public class EstoqueFragment extends Fragment {
 
         idRecViewEstoque.setAdapter(estoqueAdapter);
 
+        estoqueAdapter = new EstoqueAdapter(getContext(), produtoList);
+
+
+        idRecViewEstoque.setLayoutManager(new
+                GridLayoutManager(
+                getContext(), 1));
+
+        //fixador de tamanho da lista - deixar a lista mais rápida
+        idRecViewEstoque.setHasFixedSize(true);
+
+        //ligar o recyclerview ao adaptador
+        idRecViewEstoque.setAdapter(estoqueAdapter);
+
         fabEstoque = view.findViewById(R.id.fabEstoque);
         fabEstoque.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               CadastrarProdutoFragment fragment = new CadastrarProdutoFragment();
+                CadastrarProdutoFragment fragment = new CadastrarProdutoFragment();
                 if (getActivity() != null) {
                     getActivity().getSupportFragmentManager()
                             .beginTransaction()

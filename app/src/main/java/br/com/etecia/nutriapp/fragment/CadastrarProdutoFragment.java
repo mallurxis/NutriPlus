@@ -16,6 +16,10 @@ import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.HashMap;
@@ -23,6 +27,7 @@ import java.util.List;
 
 
 import br.com.etecia.nutriapp.API.Api;
+import br.com.etecia.nutriapp.API.RequestHandler;
 import br.com.etecia.nutriapp.R;
 import br.com.etecia.nutriapp.classes.Produto;
 
@@ -157,6 +162,7 @@ public class CadastrarProdutoFragment extends Fragment {
 
 
     };
+
     private class PerformNetworkRequest extends AsyncTask<Void, Void, String> {
         String url;
         HashMap<String, String> params;
@@ -167,9 +173,31 @@ public class CadastrarProdutoFragment extends Fragment {
             this.params = params;
             this.requestCode = requestCode;
         }
+        protected void onPostExecute(String s) {
+            super.onPostExecute(s);
+
+            try {
+                JSONObject object = new JSONObject(s);
+                if (!object.getBoolean("error")) {
+                    Toast.makeText(getContext(), object.getString("message"), Toast.LENGTH_SHORT).show();
+                    //refreshHeroList(object.getJSONArray("heroes"));
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
 
         @Override
         protected String doInBackground(Void... voids) {
-            return "";
+            RequestHandler requestHandler = new RequestHandler();
+
+            if (requestCode == CODE_POST_REQUEST)
+                return requestHandler.sendPostRequest(url, params);
+
+
+            if (requestCode == CODE_GET_REQUEST)
+                return requestHandler.sendGetRequest(url);
+
+            return null;
         }
     }}

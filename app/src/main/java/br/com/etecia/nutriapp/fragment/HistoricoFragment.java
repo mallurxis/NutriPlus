@@ -33,7 +33,12 @@ public class HistoricoFragment extends Fragment {
         idRecHistorico = view.findViewById(R.id.idRecHistorico);
 
         historicoList = new ArrayList<>();
-        historicoList.add(new HistoricoPrato("Feijoada", "Feijâo", 20.50));
+        historicoList.add(new HistoricoPrato("Feijoada", "Feijão", 20.50));
+        historicoList.add(new HistoricoPrato("Galinhada", "Frango", 20.50));
+        historicoList.add(new HistoricoPrato("Purê de batata", "Batata", 20.50));
+        historicoList.add(new HistoricoPrato("Arroz Carreteiro", "Arroz", 20.50));
+        historicoList.add(new HistoricoPrato("Contra-Filé com fritas", "Contra-Filé", 20.50));
+
 
         HistoricoAdapter historicoAdapter = new HistoricoAdapter(getContext(), historicoList);
         idRecHistorico.setLayoutManager(new GridLayoutManager(getContext(), 1));

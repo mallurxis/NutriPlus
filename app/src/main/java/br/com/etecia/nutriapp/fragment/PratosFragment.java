@@ -34,7 +34,15 @@ public class PratosFragment extends Fragment {
         idRecViewPrato = view.findViewById(R.id.idRecPratos);
 
         pratoList = new ArrayList<>();
-        pratoList.add(new Prato("Feijoada", 20.00));
+        pratoList.add(new Prato("Feijoada", 35.00));
+        pratoList.add(new Prato("Galinhada", 40.00));
+        pratoList.add(new Prato("Purê de Batata", 20.00));
+        pratoList.add(new Prato("Prato Executivo", 40.00));
+        pratoList.add(new Prato("Contra-Filé com Fritas", 23.00));
+        pratoList.add(new Prato("Strogonoff", 30.00));
+        pratoList.add(new Prato("Arroz Carreteiro", 20.00));
+        pratoList.add(new Prato("Tutu de feijão", 15.00));
+
 
         PratosAdapter pratosAdapter = new PratosAdapter(getContext(), pratoList);
         idRecViewPrato.setLayoutManager(new GridLayoutManager(getContext(), 1));

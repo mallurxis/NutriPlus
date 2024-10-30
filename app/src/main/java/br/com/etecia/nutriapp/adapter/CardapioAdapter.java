@@ -24,7 +24,6 @@ import br.com.etecia.nutriapp.fragment.RefeicoesFragment;
 
 public class CardapioAdapter extends RecyclerView.Adapter<CardapioAdapter.ViewHolder> {
     private Context context;
-    private String[] dishes = {"Pão", "Café com Leite", "Ovos Mexidos", "Salada de Frutas", "Suco de Laranja"};
     private List<Semana> semanaList;
 
     public CardapioAdapter(Context context, List<Semana> semanaList) {
@@ -44,7 +43,7 @@ public class CardapioAdapter extends RecyclerView.Adapter<CardapioAdapter.ViewHo
         Semana semana = semanaList.get(position);
 
         holder.btnSemanaCardapio.setText(semana.getNomeSemana());
-        holder.txtDataSemana.setText(String.format("dd/mm/yyyy"));
+        holder.txtDataSemana.setText(String.format(semana.getDataSemana()));
 
         holder.btnSemanaCardapio.setOnClickListener(new View.OnClickListener() {
             @Override
