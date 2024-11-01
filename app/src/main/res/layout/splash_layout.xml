@@ -16,16 +16,15 @@
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:id="@+id/imgSplash"
-        android:src="@drawable/logoapp"
-
+        android:src="@drawable/logonutriplusescuro"
         android:layout_gravity="center"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="150dp"
         />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/txtSplash"
-        android:text="Cardápio de Nutrição"
+        android:text="NutriPlus"
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
         android:textSize="20dp"
