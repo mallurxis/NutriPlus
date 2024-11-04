@@ -47,6 +47,9 @@
             android:drawableEnd="@drawable/baseline_person"
             android:drawableTint="@color/corTextoVerde"
             android:hint="RM"
+            android:focusable="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/corTextoVerde"
             android:inputType="textPersonName"
             android:textSize="20sp" />
 
@@ -71,6 +74,7 @@
             android:drawableEnd="@drawable/baseline_lock"
             android:drawableTint="@color/corTextoVerde"
             android:hint="Senha"
+            android:textColor="@color/black"
             android:inputType="textPassword"
             android:textSize="20sp" />
 
@@ -89,7 +93,8 @@
         android:height="65dp"
         android:backgroundTint="@color/corTextoVerde"
         android:text="Entrar"
-        android:textSize="20dp" />
+        android:textColor="@color/white"
+        android:textSize="20sp" />
 
 
     <Button

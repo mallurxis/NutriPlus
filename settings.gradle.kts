@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "NutriApp"
+rootProject.name = "NutriPlus"
 include(":app")

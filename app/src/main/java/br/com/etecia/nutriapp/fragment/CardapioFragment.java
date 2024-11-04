@@ -43,12 +43,6 @@ public class CardapioFragment extends Fragment {
         CardapioAdapter cardapioAdapter = new CardapioAdapter(getContext(), semanaList);
         idRecViewCardapio.setLayoutManager(new GridLayoutManager(getContext(), 1));
         idRecViewCardapio.setHasFixedSize(true);
-
-        idRecViewCardapio.setAdapter(cardapioAdapter);
-
-        cardapioAdapter = new CardapioAdapter(getContext(), semanaList);
-
-        idRecViewCardapio.setHasFixedSize(true);
         idRecViewCardapio.setAdapter(cardapioAdapter);
 
         fabCardapio = view.findViewById(R.id.fabCardapio);

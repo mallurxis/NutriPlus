@@ -48,18 +48,6 @@ public class EstoqueFragment extends Fragment {
 
         idRecViewEstoque.setAdapter(estoqueAdapter);
 
-        estoqueAdapter = new EstoqueAdapter(getContext(), produtoList);
-
-
-        idRecViewEstoque.setLayoutManager(new
-                GridLayoutManager(
-                getContext(), 1));
-
-        //fixador de tamanho da lista - deixar a lista mais rápida
-        idRecViewEstoque.setHasFixedSize(true);
-
-        //ligar o recyclerview ao adaptador
-        idRecViewEstoque.setAdapter(estoqueAdapter);
 
         fabEstoque = view.findViewById(R.id.fabEstoque);
         fabEstoque.setOnClickListener(new View.OnClickListener() {

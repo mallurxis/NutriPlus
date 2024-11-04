@@ -8,18 +8,18 @@ public class Produto  {
     private double preco, quantidade, multiplicador, quantEstoque;
     private int validade, dataEntrada;
 
-   // public Produto(String nome,  double preco, double quantidade, int codProd, double multiplicador, double quantEstoque, int validade, int dataEntrada) {
-     //   this.nome = nome;
-       // this.preco = preco;
-        //this.quantidade = quantidade;
-        //this.codProd = codProd;
+   public Produto(String nome,  double preco, double quantidade, int codProd, double multiplicador, double quantEstoque, int validade, int dataEntrada) {
+       this.nome = nome;
+      this.preco = preco;
+       this.quantidade = quantidade;
+      this.codProd = codProd;
 
         
-       // this.multiplicador = multiplicador;
-        //this.quantEstoque = quantEstoque;
-        //this.validade = validade;
-        //this.dataEntrada = dataEntrada;
-    //}
+        this.multiplicador = multiplicador;
+      this.quantEstoque = quantEstoque;
+        this.validade = validade;
+        this.dataEntrada = dataEntrada;
+    }
 
     public Produto(String nome, double preco, double quantidade) {
         this.nome = nome;

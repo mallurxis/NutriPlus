@@ -47,8 +47,6 @@ public class EstoqueAdapter extends RecyclerView.Adapter<EstoqueAdapter.ViewHold
         // Obtém o produto para a posição atual
         Produto produto = produtoList.get(position);
 
-
-
         // Configura o texto das views
         holder.txtProdModelo.setText(produto.getNome());
         holder.txtQuantModelo.setText(String.valueOf(produto.getQuantidade()));
@@ -111,7 +109,6 @@ public class EstoqueAdapter extends RecyclerView.Adapter<EstoqueAdapter.ViewHold
             txtPrecoModelo = itemView.findViewById(R.id.txtPrecoModelo);
             btnEditarProduto = itemView.findViewById(R.id.btnEditarProduto);
             btnExcluirProduto = itemView.findViewById(R.id.btnExcluirProduto);
-
 
         }
     }

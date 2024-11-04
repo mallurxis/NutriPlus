@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
@@ -41,6 +42,7 @@ public class CadastrarProdutoFragment extends Fragment {
     Button btnSalvarProd;
     TextInputEditText txtNomeProd, txtQuantProd, txtPrecoProd, txtMultiplicador, txtQuantEstoque, txtDesc, txtDataEntrada, txtValidade;
     List<Produto> produtoList;
+    ProgressBar progressBar;
     SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
 
     boolean isUpdating = false;
@@ -62,6 +64,7 @@ public class CadastrarProdutoFragment extends Fragment {
         txtDataEntrada = view.findViewById(R.id.txtInputDataEntrada);
         txtValidade = view.findViewById(R.id.txtInputValidade);
         txtDesc = view.findViewById(R.id.txtInputDesc);
+        progressBar = view.findViewById(R.id.progressBar);
 
 
         //final Produto produto = produtoList.get();
@@ -83,7 +86,7 @@ public class CadastrarProdutoFragment extends Fragment {
                     createprodutos();
                     Toast.makeText(getContext(), "Produto cadastrado com sucesso!", Toast.LENGTH_SHORT).show();
                 } catch (ParseException e) {
-                    throw new RuntimeException(e);
+                    Toast.makeText(getContext(), "Erro ao cadastrar o produto", Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -139,20 +142,21 @@ public class CadastrarProdutoFragment extends Fragment {
             txtValidade.requestFocus();
             return;
         }
-        quantidade = String.valueOf(Double.parseDouble(quantidade));
-        preco = String.valueOf(Double.parseDouble(preco));
-        multiplicador = String.valueOf(Double.parseDouble(multiplicador));
-        quantEstoque = String.valueOf(Double.parseDouble(quantEstoque));
-        dataEntrada = String.valueOf(formato.parse(dataEntrada));
-        validade = String.valueOf(formato.parse(validade));
+
+            quantidade = String.valueOf(Double.parseDouble(quantidade));
+            preco = String.valueOf(Double.parseDouble(preco));
+           // multiplicador = String.valueOf(Double.parseDouble(multiplicador));
+        // quantEstoque = String.valueOf(Double.parseDouble(quantEstoque));
+
+
 
         HashMap<String, String> params = new HashMap<>();
-        //params.put("id", id);
-        params.put("nome", nome);
-        params.put("quantidade", quantidade);
-        params.put("preco", preco);
-        params.put("multiplicador", multiplicador);
-        params.put("quantEstoque", quantEstoque);
+        //params.put("codProd", id);
+        params.put("nomeProd", nome);
+        params.put("quant", quantidade);
+        params.put("valorProd", preco);
+        params.put("mult", multiplicador);
+        //params.put("quantEstoque", quantEstoque);
         params.put("dataEntrada", dataEntrada);
         params.put("validade", validade);
         params.put("desc", desc);
@@ -162,6 +166,22 @@ public class CadastrarProdutoFragment extends Fragment {
 
 
     };
+    private void refreshProdutoList(JSONArray produtos) throws JSONException {
+        produtoList.clear();
+
+        for (int i = 0; i < produtos.length(); i++) {
+            JSONObject obj = produtos.getJSONObject(i);
+
+            produtoList.add(new Produto(
+
+                    obj.getString("nome"),
+                    obj.getDouble("quantidade"),
+                    obj.getDouble("preco")
+
+
+            ));
+        }
+    }
 
     private class PerformNetworkRequest extends AsyncTask<Void, Void, String> {
         String url;
@@ -169,18 +189,27 @@ public class CadastrarProdutoFragment extends Fragment {
         int requestCode;
 
         PerformNetworkRequest(String url, HashMap<String, String> params, int requestCode) {
-            this.url = url;
+            this.url =  url;
             this.params = params;
             this.requestCode = requestCode;
         }
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            progressBar.setVisibility(View.VISIBLE);
+
+        }
+
+
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
+            progressBar.setVisibility(View.GONE);
 
             try {
                 JSONObject object = new JSONObject(s);
                 if (!object.getBoolean("error")) {
                     Toast.makeText(getContext(), object.getString("message"), Toast.LENGTH_SHORT).show();
-                    //refreshHeroList(object.getJSONArray("heroes"));
+                    refreshProdutoList(object.getJSONArray("produtos"));
                 }
             } catch (JSONException e) {
                 e.printStackTrace();
