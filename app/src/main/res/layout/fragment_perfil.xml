@@ -56,10 +56,10 @@
 
         <TextView
             android:id="@+id/txtEmailUsu"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_below="@+id/txtNomeUsu"
-            android:paddingLeft="85dp"
+            android:layout_centerHorizontal="true"
             android:text="E-MAIL: alunonutri@etec.sp.gov.br"
             android:textSize="17dp"
             android:layout_marginTop="70dp"
@@ -67,33 +67,33 @@
 
         <TextView
             android:id="@+id/txtSenhaUsu"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_below="@+id/txtEmailUsu"
             android:layout_marginTop="20dp"
-            android:paddingLeft="85dp"
+            android:layout_alignLeft="@+id/txtEmailUsu"
             android:text="SENHA: ***********"
             android:textSize="17dp"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/txtModuloUsu"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_below="@+id/txtSenhaUsu"
             android:layout_marginTop="20dp"
-            android:paddingLeft="85dp"
+            android:layout_alignLeft="@+id/txtSenhaUsu"
             android:text="MÓDULO: 3N"
             android:textSize="17dp"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/txtRMUsu"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_below="@+id/txtModuloUsu"
             android:layout_marginTop="20dp"
-            android:paddingLeft="85dp"
+            android:layout_alignLeft="@+id/txtModuloUsu"
             android:text="RM: 23499"
             android:textSize="17dp"
             android:textStyle="bold" />

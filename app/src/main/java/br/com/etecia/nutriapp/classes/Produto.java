@@ -3,30 +3,22 @@ package br.com.etecia.nutriapp.classes;
 import java.util.Date;
 
 public class Produto  {
-    private String nome ;
+    private String nome, descricao ;
     private int codProd;
     private double preco, quantidade, multiplicador, quantEstoque;
     private int validade, dataEntrada;
 
-   public Produto(String nome,  double preco, double quantidade, int codProd, double multiplicador, double quantEstoque, int validade, int dataEntrada) {
+   public Produto(String nome,  double preco, double quantidade, double multiplicador, double quantEstoque, int validade, int dataEntrada, String descricao) {
        this.nome = nome;
       this.preco = preco;
        this.quantidade = quantidade;
-      this.codProd = codProd;
-
-        
         this.multiplicador = multiplicador;
       this.quantEstoque = quantEstoque;
         this.validade = validade;
         this.dataEntrada = dataEntrada;
+        this.descricao = descricao;
     }
 
-    public Produto(String nome, double preco, double quantidade) {
-        this.nome = nome;
-        this.preco = preco;
-        this.quantidade = quantidade;
-
-    }
 
     public String getNome() {
         return nome;
@@ -36,13 +28,6 @@ public class Produto  {
         this.nome = nome;
     }
 
-    public int getCodProd() {
-        return codProd;
-    }
-
-    public void setCodProd(int codProd) {
-        this.codProd = codProd;
-    }
 
     public double getPreco() {
         return preco;

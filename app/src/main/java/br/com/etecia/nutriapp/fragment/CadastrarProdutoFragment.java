@@ -145,8 +145,8 @@ public class CadastrarProdutoFragment extends Fragment {
 
             quantidade = String.valueOf(Double.parseDouble(quantidade));
             preco = String.valueOf(Double.parseDouble(preco));
-           // multiplicador = String.valueOf(Double.parseDouble(multiplicador));
-        // quantEstoque = String.valueOf(Double.parseDouble(quantEstoque));
+            multiplicador = String.valueOf(Double.parseDouble(multiplicador));
+            quantEstoque = String.valueOf(Double.parseDouble(quantEstoque));
 
 
 
@@ -154,9 +154,9 @@ public class CadastrarProdutoFragment extends Fragment {
         //params.put("codProd", id);
         params.put("nomeProd", nome);
         params.put("quant", quantidade);
-        params.put("valorProd", preco);
+        params.put("quantEstoque", quantEstoque);
         params.put("mult", multiplicador);
-        //params.put("quantEstoque", quantEstoque);
+        params.put("valorProd", preco);
         params.put("dataEntrada", dataEntrada);
         params.put("validade", validade);
         params.put("desc", desc);
@@ -175,8 +175,16 @@ public class CadastrarProdutoFragment extends Fragment {
             produtoList.add(new Produto(
 
                     obj.getString("nome"),
+                    obj.getDouble("preco"),
                     obj.getDouble("quantidade"),
-                    obj.getDouble("preco")
+                    obj.getDouble("multiplicador"),
+                    obj.getDouble("quantEstoque"),
+                    obj.getInt("validade"),
+                    obj.getInt("dataEntrada"),
+                    obj.getString("descricao")
+
+
+                    //String nome, double preco, double quantidade, int codProd, double multiplicador, double quantEstoque, int validade, int dataEntrada
 
 
             ));

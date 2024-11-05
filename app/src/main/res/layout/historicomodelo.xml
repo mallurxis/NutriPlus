@@ -23,7 +23,7 @@
                 android:layout_height="wrap_content"
                 android:text="Prato feijoada"
                 android:textSize="25dp"
-                android:layout_marginTop="10dp"
+                android:paddingTop="10dp"
                 android:id="@+id/txtPratoGasto"
                 android:layout_marginLeft="20dp"
                 android:layout_toRightOf="@+id/imgGastos"
@@ -55,8 +55,10 @@
             android:layout_height="wrap_content"
             android:id="@+id/txtDataHistorico"
             android:text="10/03/2024"
-            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/txtPrecoHistorico"
+            android:layout_alignLeft="@id/txtPrecoHistorico"
             android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             android:layout_marginRight="10dp"
             android:textSize="15dp"
             />
@@ -73,7 +75,7 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:layout_below="@+id/imgGastos"
+            android:layout_below="@+id/txtDataHistorico"
             android:background="@android:color/darker_gray"
             />
 
