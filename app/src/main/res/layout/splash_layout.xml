@@ -18,7 +18,7 @@
         android:id="@+id/imgSplash"
         android:src="@drawable/logonutriplusescuro"
         android:layout_gravity="center"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="250dp"
         />
     <TextView
         android:layout_width="wrap_content"
@@ -27,7 +27,7 @@
         android:text="NutriPlus"
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
-        android:textSize="20dp"
+        android:textSize="40dp"
         android:textColor="@color/corTextoVerde"/>
 
     </LinearLayout>
