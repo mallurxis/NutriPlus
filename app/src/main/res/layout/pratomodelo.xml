@@ -21,13 +21,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:textColor="@color/corTextoVerde"
             android:layout_toRightOf="@+id/imgPrato"
             android:text="Almoço Executivo"
-            android:textSize="15dp" />
+            android:textStyle="bold"
+            android:textSize="20dp" />
 
         <TextView
             android:id="@+id/txtPrecoPrato"
             android:layout_width="wrap_content"
+            android:textColor="@color/corCinza"
             android:layout_height="wrap_content"
             android:layout_below="@+id/txtNomePrato"
             android:layout_marginTop="10dp"

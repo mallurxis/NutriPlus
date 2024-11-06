@@ -26,6 +26,7 @@
         android:background="@color/corFundo"
         android:layerType="none"
         app:itemActiveIndicatorStyle="@style/App.Custom.Indicator"
+        app:itemTextColor="@color/corTextoPreto"
         app:itemTextAppearanceActiveBoldEnabled="false"
         app:labelVisibilityMode="labeled"
         app:menu="@menu/menu_bottombar"

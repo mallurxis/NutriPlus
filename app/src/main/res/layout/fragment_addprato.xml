@@ -59,6 +59,7 @@
             android:paddingLeft="60dp"
             android:paddingTop="20dp"
             android:text="Adicionar prato"
+            android:textColor="@color/corTextoPreto"
             android:textSize="20sp"
             android:textStyle="bold" />
 
