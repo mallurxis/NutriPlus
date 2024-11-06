@@ -42,7 +42,7 @@ public class CadastrarProdutoFragment extends Fragment {
     Button btnSalvarProd;
     TextInputEditText txtNomeProd, txtQuantProd, txtPrecoProd, txtMultiplicador, txtQuantEstoque, txtDesc, txtDataEntrada, txtValidade;
     List<Produto> produtoList;
-    ProgressBar progressBar;
+    static ProgressBar progressBar;
     SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
 
     boolean isUpdating = false;
@@ -90,8 +90,9 @@ public class CadastrarProdutoFragment extends Fragment {
                 }
 
             }
-        });
 
+        });
+        readProdutos();
         return view;
     }
 
@@ -179,8 +180,8 @@ public class CadastrarProdutoFragment extends Fragment {
                     obj.getDouble("quantidade"),
                     obj.getDouble("multiplicador"),
                     obj.getDouble("quantEstoque"),
-                    obj.getInt("validade"),
-                    obj.getInt("dataEntrada"),
+                    obj.getString("validade"),
+                    obj.getString("dataEntrada"),
                     obj.getString("descricao")
 
 
@@ -191,7 +192,7 @@ public class CadastrarProdutoFragment extends Fragment {
         }
     }
 
-    private class PerformNetworkRequest extends AsyncTask<Void, Void, String> {
+    public static class PerformNetworkRequest extends AsyncTask<Void, Void, String> {
         String url;
         HashMap<String, String> params;
         int requestCode;
@@ -216,8 +217,8 @@ public class CadastrarProdutoFragment extends Fragment {
             try {
                 JSONObject object = new JSONObject(s);
                 if (!object.getBoolean("error")) {
-                    Toast.makeText(getContext(), object.getString("message"), Toast.LENGTH_SHORT).show();
-                    refreshProdutoList(object.getJSONArray("produtos"));
+                 //   Toast.makeText(getContext(), object.getString("message"), Toast.LENGTH_SHORT).show();
+                   // refreshProdutoList(object.getJSONArray("produtos"));
                 }
             } catch (JSONException e) {
                 e.printStackTrace();
@@ -237,4 +238,10 @@ public class CadastrarProdutoFragment extends Fragment {
 
             return null;
         }
-    }}
+    }
+    public void readProdutos (){
+        PerformNetworkRequest request = new PerformNetworkRequest(Api.URL_READ_PRODUTOS, null, CODE_GET_REQUEST);
+        request.execute();
+    }
+
+}

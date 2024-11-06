@@ -2,23 +2,29 @@ package br.com.etecia.nutriapp.classes;
 
 import java.util.Date;
 
-public class Produto  {
-    private String nome, descricao ;
+public class Produto {
+    private String nome, descricao;
     private int codProd;
     private double preco, quantidade, multiplicador, quantEstoque;
-    private int validade, dataEntrada;
+    private String validade, dataEntrada;
 
-   public Produto(String nome,  double preco, double quantidade, double multiplicador, double quantEstoque, int validade, int dataEntrada, String descricao) {
-       this.nome = nome;
-      this.preco = preco;
-       this.quantidade = quantidade;
+
+    public Produto(String nome, double preco, double quantidade, double multiplicador, double quantEstoque, String validade, String dataEntrada, String descricao) {
+        this.nome = nome;
+        this.preco = preco;
+        this.quantidade = quantidade;
         this.multiplicador = multiplicador;
-      this.quantEstoque = quantEstoque;
+        this.quantEstoque = quantEstoque;
         this.validade = validade;
         this.dataEntrada = dataEntrada;
         this.descricao = descricao;
     }
 
+    public Produto(String nome, double preco, double quantEstoque) {
+        this.nome = nome;
+        this.preco = preco;
+        this.quantEstoque = quantEstoque;
+    }
 
     public String getNome() {
         return nome;
@@ -53,15 +59,35 @@ public class Produto  {
         this.multiplicador = multiplicador;
     }
 
-    public int getValidade() {
+    public String getValidade() {
         return validade;
     }
 
-    public void setValidade(int validade) {this.validade = validade;}
+    public void setValidade(String validade) {
+        this.validade = validade;
+    }
 
-    public int getDataEntrada() {
+    public String getDataEntrada() {
         return dataEntrada;
     }
 
-    public void setDataEntrada(int dataEntrada) {this.dataEntrada = dataEntrada;}
+    public void setDataEntrada(String dataEntrada) {
+        this.dataEntrada = dataEntrada;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public double getQuantEstoque() {
+        return quantEstoque;
+    }
+
+    public void setQuantEstoque(double quantEstoque) {
+        this.quantEstoque = quantEstoque;
+    }
 }
