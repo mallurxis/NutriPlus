@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "302182572764",
+    "project_id": "nutriplus-4be80",
+    "storage_bucket": "nutriplus-4be80.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:302182572764:android:0ea40a302010dbd7888a19",
+        "android_client_info": {
+          "package_name": "br.com.etecia.nutriapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGjidyTg2VS-QE89bfXEPfIj0VJdyj4ww"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
