@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/corFundo">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/imgGastos"
+            android:src="@drawable/gastos_icon"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="10dp"
+            />
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Prato feijoada"
+                android:textSize="25dp"
+                android:textColor="@color/corTextoVerde"
+                android:paddingTop="10dp"
+                android:id="@+id/txtPratoGasto"
+                android:layout_marginLeft="20dp"
+                android:textStyle="bold"
+                android:layout_toRightOf="@+id/imgGastos"
+                />
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="15dp"
+            android:layout_width="wrap_content"
+            android:textColor="@color/corCinza"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtNomeIngrediente"
+            android:layout_below="@id/txtPratoGasto"
+            android:text="Feijão - 100g - R$ 5,10"
+            android:layout_toRightOf="@+id/imgGastos"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtPrecoHistorico"
+            android:text="Preço total: 20,00"
+            android:layout_toRightOf="@+id/imgGastos"
+            android:layout_below="@id/txtNomeIngrediente"
+            android:textColor="@color/corCinza"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="15dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtDataHistorico"
+            android:text="10/03/2024"
+            android:textColor="@color/corCinza"
+            android:layout_below="@+id/txtPrecoHistorico"
+            android:layout_alignLeft="@id/txtPrecoHistorico"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:textSize="15dp"
+            />
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/imgDeleteHistorico"
+            android:src="@drawable/baseline_delete"
+            android:layout_below="@+id/txtNomeIngrediente"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/txtDataHistorico"
+            android:background="@android:color/darker_gray"
+            />
+
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

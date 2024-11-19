@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/idFragmentPerfil"
+    tools:context=".fragment.PerfilFragment">
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:background="@color/corFundo"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/corFundo">
+
+        <TextView
+            android:id="@+id/txtHeaderPerfil"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="@color/corTextoVerde"
+            android:paddingLeft="20dp"
+            android:paddingTop="15dp"
+            android:text="PERFIL"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignEnd="@+id/txtHeaderPerfil"
+            android:paddingTop="5dp"
+            android:paddingRight="5dp"
+            android:src="@drawable/logonutriplus" />
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:id="@+id/imgPerfil"
+            android:layout_below="@id/txtHeaderPerfil"
+            android:src="@drawable/perfiluser_icon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="NOME DE USÚARIO"
+            android:id="@+id/txtNomeUsu"
+            android:layout_below="@+id/imgPerfil"
+            android:textStyle="bold"
+            android:textSize="17dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/txtEmailUsu"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_below="@+id/txtNomeUsu"
+            android:layout_centerHorizontal="true"
+            android:text="E-MAIL: alunonutri@etec.sp.gov.br"
+            android:textSize="17dp"
+            android:layout_marginTop="70dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtSenhaUsu"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_below="@+id/txtEmailUsu"
+            android:layout_marginTop="20dp"
+            android:layout_alignLeft="@+id/txtEmailUsu"
+            android:text="SENHA: ***********"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtModuloUsu"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_below="@+id/txtSenhaUsu"
+            android:layout_marginTop="20dp"
+            android:layout_alignLeft="@+id/txtSenhaUsu"
+            android:text="MÓDULO: 3N"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtRMUsu"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_below="@+id/txtModuloUsu"
+            android:layout_marginTop="20dp"
+            android:layout_alignLeft="@+id/txtModuloUsu"
+            android:text="RM: 23499"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_below="@id/txtRMUsu"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnEditarPerfil"
+            android:layout_gravity="center"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="100dp"
+            android:width="370dp"
+            android:height="65dp"
+            android:backgroundTint="@color/corTextoVerde"
+            android:text="Editar"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/btnSair"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnEditarPerfil"
+            android:layout_gravity="center"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="100dp"
+            android:width="370dp"
+            android:height="65dp"
+            android:backgroundTint="@color/corTextoVerde"
+            android:text="Sair"
+            android:textSize="20dp" />
+
+
+    </RelativeLayout>
+</ScrollView>
+</FrameLayout>

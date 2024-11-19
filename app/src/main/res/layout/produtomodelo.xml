@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/idCardProduto"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="@color/corFundo">
+
+        <!-- Nome do Produto -->
+        <TextView
+            android:id="@+id/txtProdModelo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Produto"
+            android:paddingLeft="15dp"
+            android:textStyle="bold"
+            android:textColor="@color/corTextoVerde"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentStart="true"
+            android:textSize="25sp"
+            />
+
+        <!-- Quantidade -->
+        <TextView
+            android:id="@+id/txtQuantModelo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtProdModelo"
+            android:text="Quantidade: "
+            android:paddingLeft="20dp"
+            android:textColor="@color/corCinza"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentStart="true"/>
+
+        <!-- Preço -->
+        <TextView
+            android:id="@+id/txtPrecoModelo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtQuantModelo"
+            android:text="Preço Unitario:"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/corCinza"
+            android:layout_marginBottom="10dp"
+            android:paddingLeft="20dp"
+            android:textSize="15sp"
+            android:layout_alignParentStart="true"
+            />
+
+        <!-- Ícone de Editar (alinhado à direita) -->
+        <ImageView
+            android:id="@+id/btnEditarProduto"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignTop="@id/txtProdModelo"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="5dp"
+
+            android:src="@drawable/baseline_edit_note" />
+
+        <!-- Ícone de Excluir (abaixo do Editar e alinhado à direita) -->
+        <ImageView
+            android:id="@+id/btnExcluirProduto"
+            android:layout_width="35dp"
+            android:layout_height="25dp"
+            android:layout_below="@+id/btnEditarProduto"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/baseline_delete" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/txtPrecoModelo"
+            android:background="@android:color/darker_gray"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

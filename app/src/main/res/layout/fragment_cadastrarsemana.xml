@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.CadastrarSemanaFragment">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:background="@color/corFundo"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/corFundo">
+
+
+        <TextView
+            android:id="@+id/txtHeaderSemana"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="@color/corTextoVerde"
+            android:paddingLeft="20dp"
+            android:paddingTop="15dp"
+            android:text="CARDÁPIO"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignEnd="@+id/txtHeaderSemana"
+            android:paddingTop="5dp"
+            android:paddingRight="5dp"
+            android:src="@drawable/logonutriplus" />
+
+        <ImageView
+            android:id="@+id/btnVoltarAddSemana"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/txtHeaderSemana"
+            android:layout_alignParentStart="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="5dp"
+            android:paddingTop="20dp"
+            android:paddingLeft="15dp"
+            android:src="@drawable/baseline_back" />
+
+        <TextView
+            android:id="@+id/txtCadProd"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_below="@+id/txtHeaderSemana"
+            android:paddingLeft="60dp"
+            android:paddingTop="20dp"
+            android:text="Cadastrar Semana"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textProduto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxStrokeColor="@color/corTextoVerde"
+            app:hintTextColor="@color/corTextoVerde"
+            android:textColorHint="@color/corCinza"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_below="@+id/txtCadProd"
+            android:hint="Semana"
+            android:padding="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textPeso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textProduto"
+            app:boxStrokeColor="@color/corTextoVerde"
+            app:hintTextColor="@color/corTextoVerde"
+            android:textColorHint="@color/corCinza"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:hint="Data Inicio"
+            android:padding="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtDataFinal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxStrokeColor="@color/corTextoVerde"
+            app:hintTextColor="@color/corTextoVerde"
+            android:textColorHint="@color/corCinza"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_below="@+id/textPeso"
+            android:hint="Data Final"
+            android:padding="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_below="@id/txtDataFinal"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnSalvarSemana"
+            android:layout_gravity="center"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="100dp"
+            android:width="370dp"
+            android:height="65dp"
+            android:backgroundTint="@color/corTextoVerde"
+            android:text="Salvar"
+            android:textSize="20dp" />
+
+
+
+    </RelativeLayout>
+    </ScrollView>
+</FrameLayout>

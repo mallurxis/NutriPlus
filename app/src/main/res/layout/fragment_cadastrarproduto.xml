@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/idCadastroProduto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.CadastrarProdutoFragment">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:background="@color/corFundo"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/corFundo">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_below="@+id/textPreco"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:id="@+id/txtHeaderCadProd"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:background="@color/corTextoVerde"
+                android:paddingLeft="20dp"
+                android:paddingTop="15dp"
+                android:text="PRODUTOS"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignEnd="@+id/txtHeaderCadProd"
+                android:paddingTop="5dp"
+                android:paddingRight="5dp"
+                android:src="@drawable/logonutriplus" />
+
+            <ImageView
+                android:id="@+id/btnVoltarCadProd"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/txtHeaderCadProd"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:paddingLeft="15dp"
+                android:paddingTop="20dp"
+                android:src="@drawable/baseline_back" />
+
+            <EditText
+                android:id="@+id/editTextProdutoId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/txtCadProd"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_below="@+id/txtHeaderCadProd"
+                android:paddingLeft="60dp"
+                android:paddingTop="20dp"
+                android:text="Cadastrar Produto"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textProduto"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtCadProd"
+                app:boxStrokeColor="@color/corTextoVerde"
+                app:hintTextColor="@color/corTextoVerde"
+                android:textColorHint="@color/corCinza"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:hint="Produto"
+                android:padding="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtInputProd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textPeso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textProduto"
+                android:hint="Peso/Quantidade"
+                android:padding="10dp"
+                app:boxStrokeColor="@color/corTextoVerde"
+                app:hintTextColor="@color/corTextoVerde"
+                android:textColorHint="@color/corCinza"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtInputQuant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textPreco"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textPeso"
+                android:hint="Preço"
+                android:padding="10dp"
+                app:boxStrokeColor="@color/corTextoVerde"
+                app:hintTextColor="@color/corTextoVerde"
+                android:textColorHint="@color/corCinza"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtInputPreco"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textMult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textPreco"
+                android:hint="Multiplicador"
+                app:boxStrokeColor="@color/corTextoVerde"
+                app:hintTextColor="@color/corTextoVerde"
+                android:textColorHint="@color/corCinza"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:padding="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtInputMult"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textQuantEstoque"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textMult"
+                android:hint="Quantidade em estoque"
+                app:boxStrokeColor="@color/corTextoVerde"
+                app:hintTextColor="@color/corTextoVerde"
+                android:textColorHint="@color/corCinza"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:padding="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtInputQuantEstoque"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textQuantEstoque"
+                app:boxStrokeColor="@color/corTextoVerde"
+                app:hintTextColor="@color/corTextoVerde"
+                android:textColorHint="@color/corCinza"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:hint="Descrição"
+                android:padding="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtInputDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textDataEnt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxStrokeColor="@color/corTextoVerde"
+                app:hintTextColor="@color/corTextoVerde"
+                android:textColorHint="@color/corCinza"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_below="@+id/textDesc"
+                android:hint="Data de entrada"
+                android:padding="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtInputDataEntrada"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textValidade"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textDataEnt"
+                app:boxStrokeColor="@color/corTextoVerde"
+                app:hintTextColor="@color/corTextoVerde"
+                android:textColorHint="@color/corCinza"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:hint="Validade"
+                android:padding="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtInputValidade"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <Button
+                android:id="@+id/btnSalvarProd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textValidade"
+                android:layout_gravity="center"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="100dp"
+                android:width="370dp"
+                android:height="65dp"
+                android:backgroundTint="@color/corTextoVerde"
+                android:text="Salvar"
+                android:textSize="20dp" />
+
+
+        </RelativeLayout>
+    </ScrollView>
+</FrameLayout>

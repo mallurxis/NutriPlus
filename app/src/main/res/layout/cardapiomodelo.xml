@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/corFundo">
+
+        <Button
+            android:id="@+id/btnSemanaCardapio"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Semana 01"
+            android:textColor="@color/corTextoVerde"
+            android:textSize="30sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtDataSemana"
+            android:text="Data: 01/03/2025"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:textSize="17dp"
+            android:textColor="@color/black"
+            android:layout_below="@+id/btnSemanaCardapio"
+
+            />
+
+        <ImageView
+            android:id="@+id/btnEditarSemana"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignTop="@id/btnSemanaCardapio"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/baseline_edit_note" />
+
+        <!-- Ícone de Excluir (abaixo do Editar e alinhado à direita) -->
+        <ImageView
+            android:id="@+id/btnExcluirSemana"
+            android:layout_width="35dp"
+            android:layout_height="25dp"
+            android:layout_below="@+id/btnEditarSemana"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/baseline_delete" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/btnExcluirSemana"
+            android:background="@android:color/darker_gray"/>
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
