@@ -32,7 +32,7 @@
         android:layout_height="200dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
-        android:src="@drawable/logonutriplusescuro" />
+        android:src="@drawable/nutriplusnd" />
 
     <TextView
         android:id="@+id/txtCadastro"
@@ -85,10 +85,11 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/edtRegEmail"
             android:drawableEnd="@drawable/baseline_email"
             android:drawableTint="@color/corTextoVerde"
             android:hint="E-mail"
-            android:inputType="textPassword"
+            android:inputType="textEmailAddress"
             android:textSize="20sp" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -135,6 +136,7 @@
             android:layout_height="wrap_content"
             android:drawableEnd="@drawable/baseline_lock"
             android:drawableTint="@color/corTextoVerde"
+            android:id="@+id/edtRegSenha"
             android:hint="Senha"
             android:inputType="textPassword"
             android:textSize="20sp" />
