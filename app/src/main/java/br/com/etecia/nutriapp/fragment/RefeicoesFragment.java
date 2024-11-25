@@ -20,7 +20,7 @@ import br.com.etecia.nutriapp.classes.Produto;
 
 public class RefeicoesFragment extends Fragment {
     String[] items = {"Feijoada", "Galinhada", "Purê de Batata", "Prato executivo", "Contra-Filé com Fritas", "Strogonoff", "Arroz carreteiro", "Tutu de feijão"};
-    AutoCompleteTextView AcPratoPrincipal;
+    AutoCompleteTextView AcPratoPrincipal, AcEntradaFria, AcGuarnicao, AcSobremesa, AcSobremesaDiet, AcOpcao,AcEntradaQuente, AcPure, AcDlax;
     ArrayAdapter<String> adapterItems;
     ImageView btnVoltarRefeicoes;
 
