@@ -49,7 +49,7 @@ public class EstoqueAdapter extends RecyclerView.Adapter<EstoqueAdapter.ViewHold
 
         // Configura o texto das views
         holder.txtProdModelo.setText(produto.getNome());
-        holder.txtQuantModelo.setText(String.valueOf(produto.getQuantidade()));
+        holder.txtQuantModelo.setText(String.format("Quantidade: ",produto.getQuantidade()));
         holder.txtPrecoModelo.setText(String.format("R$ %.2f", produto.getPreco())); // Ajuste conforme necessário
 
 

@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     tools:context=".fragment.RefeicoesFragment">
 
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -66,7 +67,7 @@
             android:hint="Entrada Fria">
 
             <AutoCompleteTextView
-
+                android:id="@+id/idInputEntradaFriaA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="none" />
@@ -81,7 +82,7 @@
             android:hint="Guarnição">
 
             <AutoCompleteTextView
-
+                android:id="@+id/idInputGuarnicaoA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="none" />
@@ -96,7 +97,7 @@
             android:hint="Sobremesa">
 
             <AutoCompleteTextView
-
+                android:id="@+id/idInputSobremesaA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="none" />
@@ -111,7 +112,7 @@
             android:hint="Sobremesa diet">
 
             <AutoCompleteTextView
-
+                android:id="@+id/idInputSobremesaDietA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="none" />
@@ -126,7 +127,7 @@
             android:hint="Opção">
 
             <AutoCompleteTextView
-
+                android:id="@+id/idInputOpcaoA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="none" />
@@ -141,7 +142,7 @@
             android:hint="Entrada Quente">
 
             <AutoCompleteTextView
-
+                android:id="@+id/idInputEntradaQuenteA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="none" />
@@ -156,7 +157,7 @@
             android:hint="Purê">
 
             <AutoCompleteTextView
-
+                android:id="@+id/idInputPureA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="none" />
@@ -171,7 +172,7 @@
             android:hint="D.lax/Diabete">
 
             <AutoCompleteTextView
-
+                android:id="@+id/idInputDiabeteA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="none" />

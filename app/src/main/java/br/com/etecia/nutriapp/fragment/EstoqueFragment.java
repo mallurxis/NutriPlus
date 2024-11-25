@@ -35,7 +35,7 @@ public class EstoqueFragment extends Fragment {
 
         idRecViewEstoque = view.findViewById(R.id.idRecEstoque);
         produtoList = new ArrayList<>();
-        produtoList.add(new Produto("Arroz", 20.00, 20.00));
+        produtoList.add(new Produto("Arroz", 20.00,  20.00));
         produtoList.add(new Produto("Feijão", 50.00, 20.00));
         produtoList.add(new Produto("Contra-Filé", 40.00, 1));
         produtoList.add(new Produto("Batata", 50.00, 30.00));

@@ -20,10 +20,10 @@ public class Produto {
         this.descricao = descricao;
     }
 
-    public Produto(String nome, double preco, double quantEstoque) {
+    public Produto(String nome, double preco, double quantidade) {
         this.nome = nome;
         this.preco = preco;
-        this.quantEstoque = quantEstoque;
+        this.quantidade = quantidade;
     }
 
     public String getNome() {
