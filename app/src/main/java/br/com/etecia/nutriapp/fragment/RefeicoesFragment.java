@@ -19,8 +19,8 @@ import br.com.etecia.nutriapp.R;
 import br.com.etecia.nutriapp.classes.Produto;
 
 public class RefeicoesFragment extends Fragment {
-    String[] items = {"Arroz", "feijão"};
-    AutoCompleteTextView autoCompleteTextView;
+    String[] items = {"Feijoada", "Galinhada", "Purê de Batata", "Prato executivo", "Contra-Filé com Fritas", "Strogonoff", "Arroz carreteiro", "Tutu de feijão"};
+    AutoCompleteTextView AcPratoPrincipal;
     ArrayAdapter<String> adapterItems;
     ImageView btnVoltarRefeicoes;
 
@@ -29,14 +29,14 @@ public class RefeicoesFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_refeicoes, container, false);
 
-        autoCompleteTextView = view.findViewById(R.id.idInputPratoPrincipalA);
+        AcPratoPrincipal = view.findViewById(R.id.idInputPratoPrincipalA);
         btnVoltarRefeicoes = view.findViewById(R.id.btnVoltarRefeicoes);
 
         // Inicialize o ArrayAdapter com um contexto válido
         adapterItems = new ArrayAdapter<String>(getContext(), R.layout.list_item,items);
-        autoCompleteTextView.setAdapter(adapterItems);
+        AcPratoPrincipal.setAdapter(adapterItems);
 
-        autoCompleteTextView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        AcPratoPrincipal.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String item = parent.getItemAtPosition(position).toString();
