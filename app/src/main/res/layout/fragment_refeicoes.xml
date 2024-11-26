@@ -178,6 +178,21 @@
                 android:inputType="none" />
         </com.google.android.material.textfield.TextInputLayout>
 
+        <Button
+            android:id="@+id/btnSalvarCardapio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/idInputDiabete"
+            android:layout_gravity="center"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="100dp"
+            android:width="370dp"
+            android:height="65dp"
+            android:backgroundTint="@color/corTextoVerde"
+            android:text="Salvar"
+            android:textSize="20dp" />
+
 
     </RelativeLayout>
 </FrameLayout>

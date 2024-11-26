@@ -37,7 +37,7 @@ public class EstoqueFragment extends Fragment {
         produtoList = new ArrayList<>();
         produtoList.add(new Produto("Arroz", 20.00,  20.00));
         produtoList.add(new Produto("Feijão", 50.00, 20.00));
-        produtoList.add(new Produto("Contra-Filé", 40.00, 1));
+        produtoList.add(new Produto("Contra-Filé", 40.00, 5));
         produtoList.add(new Produto("Batata", 50.00, 30.00));
         produtoList.add(new Produto("Frango", 40.00, 30.00));
         produtoList.add(new Produto("Sal", 15.00, 5));
