@@ -32,13 +32,13 @@ public class CardapioFragment extends Fragment {
 
         idRecViewCardapio = view.findViewById(R.id.idRecCardapio);
         semanaList = new ArrayList<>();
-        semanaList.add(new Semana("Semana 1", "01/03/2025"));
-        semanaList.add(new Semana("Semana 2", "08/03/2025"));
-        semanaList.add(new Semana("Semana 3", "16/03/2025"));
-        semanaList.add(new Semana("Semana 4", "24/03/2025"));
-        semanaList.add(new Semana("Semana 5", "01/04/2025"));
-        semanaList.add(new Semana("Semana 6", "08/04/2025"));
-        semanaList.add(new Semana("Semana 7", "16/04/2025"));
+        semanaList.add(new Semana("Semana 1", "27/11/2024"));
+        semanaList.add(new Semana("Semana 2", "04/12/2024"));
+        semanaList.add(new Semana("Semana 3", "11/12/2024"));
+        semanaList.add(new Semana("Semana 4", "18/12/2024"));
+        semanaList.add(new Semana("Semana 5", "25/12/2024"));
+        semanaList.add(new Semana("Semana 6", "01/01/2025"));
+        semanaList.add(new Semana("Semana 7", "08/01/2025"));
 
         CardapioAdapter cardapioAdapter = new CardapioAdapter(getContext(), semanaList);
         idRecViewCardapio.setLayoutManager(new GridLayoutManager(getContext(), 1));

@@ -58,7 +58,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/txtDataHistorico"
-            android:text="10/03/2024"
+            android:text="27/11/2024"
             android:textColor="@color/corCinza"
             android:layout_below="@+id/txtPrecoHistorico"
             android:layout_alignLeft="@id/txtPrecoHistorico"
@@ -67,6 +67,7 @@
             android:layout_marginRight="10dp"
             android:textSize="15dp"
             />
+
         <ImageView
             android:layout_width="30dp"
             android:layout_height="30dp"
